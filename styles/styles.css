@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -19,7 +20,7 @@ body{
 
 .container{
     width: 1340px;
-    margin: 0 2em 0 5em;
+    margin: 0 2em 0 5.5em;
     box-sizing: border-box;
 }
 
@@ -45,7 +46,12 @@ body{
     
 }
 
-.menu__list-item a{
+a {
+    text-decoration: none;
+    color: #09262B;
+}
+
+.menu__list-item {
     margin: 0px 30px;
     color: #09262B;
     text-decoration: none;
@@ -56,15 +62,20 @@ body{
     font-weight: 400;
 }
 
-.greybutton{
-    background-color: #F2F0EF;
+.btn{
+    font-weight: 600;
     padding: 1em;
+
 }
 
-.redbutton{
+.btn--grey{
+    background-color: #F2F0EF;
+}
+
+.btn--red{
     background-color: #D23D29;
-    padding: 1em;
     margin: 1em;
+    color: ghostwhite;
 }
 
 
@@ -77,13 +88,13 @@ body{
 }
 
 .banner__title{
-    font-size: 48px;
+    font-size: 3.5em;
     color: #09262B;
-    margin: 1.5em 0 0.5em;    
+    margin: 2em 0 0.5em;    
 }
 
 .banner__body{
-    font-size: 20px;
+    font-size: 1.5em;
     color: #09262B;
 }
 
@@ -102,17 +113,89 @@ body{
     padding: 1em;
     margin: 0.5em;
     border: 0em;
+    color: ghostwhite;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .banner__image{
     justify-content: end;
+    margin-bottom: 1em;
+    width: 100%;
 }
-
-.universities-slider{
+.slider{
     display: flex;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    justify-content: space-between;
 }
+
+.logos{
+    padding: 2em 0;
+    display: inline-flex;
+}
+
+.slider__text{
+    justify-content: end;
+    margin: 2em;
+}
+
+.slider__text--red{
+    color:#D23D29;
+    font-weight: 600;
+    font-size: 2em;
+}
+
+.slider__text--grey{
+    color: #849395;
+}
+
+.slider-logo{
+    width: 200px;
+    align-items: center;
+}
+
 
 .characteristics{
     display: flex;
+    justify-content:space-between;
+}
+
+.characteristics__image{
+    width: 600px;
+}
+
+.characteristics__text{
+    margin: 7em;
+}
+
+h2 {
+    font-size: 3em;
+    color: #09262B;
+    margin-bottom: 0.5em;
+}
+
+p{
+    color: #354547;
+
+}
+
+h3 {
+    color: #09262B;
+    font-size: 1.5em;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.characteristics__list{
+    margin-top: 1em;
+    list-style-image: url(../img/arrow.png);
+    list-style-position: inside;
+}
+
+.characteristics__item{
+    padding: 1em 0 0 0;
+    display: inline;
 }
