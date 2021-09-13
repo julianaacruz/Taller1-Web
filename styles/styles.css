@@ -19,8 +19,8 @@ body{
 }
 
 .container{
-    width: 1340px;
-    margin: 0 2em 0 5.5em;
+    width: 1363px;
+    margin: 0 0 0 5.5em;
     box-sizing: border-box;
 }
 
@@ -169,13 +169,17 @@ img{
 }
 
 .characteristics__text{
-    margin: 7em;
+    margin: 0 6em;
 }
 
 h2 {
     font-size: 3em;
     color: #09262B;
+}
+
+.characteristics__title{
     margin-bottom: 0.5em;
+    margin-top: 2.5em;
 }
 
 p{
@@ -190,12 +194,93 @@ h3 {
 }
 
 .characteristics__list{
-    margin-top: 1em;
+    margin-top: 2em;
     list-style-image: url(../img/arrow.png);
     list-style-position: inside;
 }
 
 .characteristics__item{
-    padding: 1em 0 0 0;
     display: inline;
+}
+
+.characteristics__description{
+    margin: 1em 0;
+}
+
+.btn--green{
+    background-color: #09262B;
+    color: ghostwhite;
+    margin-left: 7em; 
+}
+
+.courses{
+    background-color: #09262B;
+    justify-content: right;
+    margin-top: 3em;
+    padding: 3em 4em;
+}
+
+.courses__title{
+    color: white;
+    font-weight: 600;
+}
+
+.courses__list{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2em;
+}
+
+.courses__item{
+    background-color: white;
+    border-radius: 5px;
+    width: 240px;
+    height: 240px;
+    padding: 1.5em;
+    margin: 4em 0 4em 0;
+    
+}
+
+.courses__logo{
+    height: 50px;
+    width:100px;
+}
+
+.courses__name{
+    font-weight: 700;
+    font-size: 1.3em;
+    color: #09262B;
+}
+
+.courses__uni{
+    font-weight: 400;
+    font-size: 1em;
+    color: #354547;
+}
+
+.courses__type{
+    font-weight: 600;
+    font-size: 1em;
+    color: #D23D29;
+    position: relative;
+    margin-top: 2.5em;
+}
+
+.courses__other{
+    display: block;
+    width: 85px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 9em;
+}
+
+.courses__btn{
+    width: 85px;
+    height: 85px;
+}
+
+.courses__more {
+    font-weight: 600;
+    color: white ;
 }
