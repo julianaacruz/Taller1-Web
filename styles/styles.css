@@ -20,8 +20,11 @@ body{
 
 .container{
     width: 1363px;
-    margin: 0 0 0 5.5em;
     box-sizing: border-box;
+}
+
+.container2{
+    margin: 0 0 0 10em;
 }
 
 
@@ -35,7 +38,7 @@ body{
 
 .menu__logo{
     height: 50px;
-    margin: 0em;
+    margin-right: 5em;
 }
 
 .menu__right{
@@ -90,7 +93,7 @@ a {
 .banner__title{
     font-size: 3.5em;
     color: #09262B;
-    margin: 2em 0 0.5em;    
+    margin: 2.3em 0 0.5em;    
 }
 
 .banner__body{
@@ -210,13 +213,14 @@ h3 {
 .btn--green{
     background-color: #09262B;
     color: ghostwhite;
-    margin-left: 7em; 
+    margin-left: 5em; 
+    margin-bottom: 5em;
 }
 
 .courses{
     background-color: #09262B;
     justify-content: right;
-    margin-top: 3em;
+    margin-top: 5em;
     padding: 3em 4em;
 }
 
@@ -283,4 +287,15 @@ h3 {
 .courses__more {
     font-weight: 600;
     color: white ;
+}
+
+.phrase{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phrase__img{
+    height: 640px;
+    width: 640px;
 }
