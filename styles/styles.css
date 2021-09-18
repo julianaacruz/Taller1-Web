@@ -68,6 +68,8 @@ a {
 .btn{
     font-weight: 600;
     padding: 1em;
+    box-sizing: border-box;
+
 
 }
 
@@ -108,6 +110,7 @@ a {
     padding: 1em;
     width: 22em;
     border: 0em;
+    box-sizing: border-box;
 
 }
 
@@ -117,6 +120,8 @@ a {
     margin: 0.5em;
     border: 0em;
     color: ghostwhite;
+    box-sizing: border-box;
+
 }
 
 img{
@@ -139,6 +144,7 @@ img{
 .logos{
     padding: 2em 0;
     display: inline-flex;
+    box-sizing: border-box;
 }
 
 .slider__text{
@@ -222,6 +228,7 @@ h3 {
     justify-content: right;
     margin-top: 5em;
     padding: 3em 4em;
+    box-sizing: border-box;
 }
 
 .courses__title{
@@ -242,6 +249,7 @@ h3 {
     width: 240px;
     height: 240px;
     padding: 1.5em;
+    box-sizing: border-box;
     margin: 4em 0 4em 0;
     
 }
@@ -292,16 +300,20 @@ h3 {
 .phrase{
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
-.phrase__img{
-    height: 640px;
-    width: 640px;
+.phrase__body{
+    width: 650px;
+}
+
+.phrase__text{
+    color: #D23D29 ;
+    margin-bottom: 1.5em;
 }
 
 .footer{
     background-color: #09262B;
+    height: 350px;
 }
 
 .footer__logo{
@@ -317,3 +329,59 @@ h3 {
 .footer__download-img{
     width: 110px;
 }
+
+.footer__menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__list{
+    list-style: none;
+}
+
+.footer__logos-list{
+    list-style: none;
+    display: flex;
+    margin-bottom: 2em;
+}
+
+.footer__download-list{
+    list-style: none;
+    display: flex;
+    margin-top: 2em;
+}
+
+.footer__title{
+    color: #FFFFFF;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.footer__body a{
+    color: #f9f9f9dc;
+    margin-top: 0.5em;
+}
+
+.footer__body{
+    color: #f9f9f9dc;
+    margin-top: 0.5em;
+}
+
+.footer__rights{
+    margin-top: 3em;
+}
+
+.newsletter{
+    margin-right: 3em;
+}
+
+.newsletter__title{
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.newsletter__form{
+    margin-top: 2em;
+}
+
