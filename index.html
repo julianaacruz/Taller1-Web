@@ -7,6 +7,7 @@
     <title>Taller 1</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/styles-mobile.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 </head>
 <body>
     <nav class="menu container">
@@ -66,12 +67,29 @@
 </header>
 
 <section class="slider container">
-    <div class="logos container2">
-        <img class="slider-logo" src="https://prod-discovery.edx-cdn.org/organization/logos/2a73d2ce-c34a-4e08-8223-83bca9d2f01d-2cc8854c6fee.png" alt="MTI"> 
-        <img class="slider-logo" src="https://prod-discovery.edx-cdn.org/organization/logos/44022f13-20df-4666-9111-cede3e5dc5b6-2cc39992c67a.png" alt="Hardvard"> 
-        <img class="slider-logo" src="https://prod-discovery.edx-cdn.org/organization/logos/87b07564-d569-4cfd-bee6-8b0a407acb73-dc33e4b5f353.png" alt="IBM"> 
-        <img class="slider-logo" src="https://prod-discovery.edx-cdn.org/organization/logos/c484a523-d396-4aff-90f4-bb7e82e16bf6-f9e6cc4a4c94.png" alt="TU Delf"> 
-        <img class="slider-logo" src="https://prod-discovery.edx-cdn.org/organization/logos/e0bfb887-eabd-4f4a-8583-7e5aa368b274-cb687d8acb0e.png" alt="Universidad del Rosario"> 
+    <div class="container__slider swiper mySwiper">
+        <div class="swiper-wrapper">
+    
+            <img class="swiper-slide slider-logo" src="https://prod-discovery.edx-cdn.org/organization/logos/2a73d2ce-c34a-4e08-8223-83bca9d2f01d-2cc8854c6fee.png" alt="MTI"> 
+            <img class="swiper-slide slider-logo" src="https://prod-discovery.edx-cdn.org/organization/logos/44022f13-20df-4666-9111-cede3e5dc5b6-2cc39992c67a.png" alt="Hardvard"> 
+            <img class="swiper-slide slider-logo" src="https://prod-discovery.edx-cdn.org/organization/logos/87b07564-d569-4cfd-bee6-8b0a407acb73-dc33e4b5f353.png" alt="IBM"> 
+            <img class="swiper-slide slider-logo" src="https://prod-discovery.edx-cdn.org/organization/logos/c484a523-d396-4aff-90f4-bb7e82e16bf6-f9e6cc4a4c94.png" alt="TU Delf"> 
+            <img class="swiper-slide slider-logo" src="https://prod-discovery.edx-cdn.org/organization/logos/e0bfb887-eabd-4f4a-8583-7e5aa368b274-cb687d8acb0e.png" alt="Universidad del Rosario"> 
+            <img class="swiper-slide slider-logo" src="https://prod-discovery.edx-cdn.org/organization/logos/54bc81cb-b736-4505-aa51-dd2b18c61d84-2082c7ba1024.png" alt="Berkeley"> 
+            <img class="swiper-slide slider-logo" src="https://prod-discovery.edx-cdn.org/organization/logos/188a8d01-87c1-45e6-b518-3de65906deac-af51133a34ab.png" alt="Sorbonne Université"> 
+            <img class="swiper-slide slider-logo" src="https://prod-discovery.edx-cdn.org/organization/logos/8554749f-b920-4d7f-8986-af6bb95290aa-f336c6a2ca11.png" alt="The University of Queensland"> 
+            <img class="swiper-slide slider-logo" src="https://prod-discovery.edx-cdn.org/organization/logos/300a9275-e360-4599-92db-8c2222d5f614-712b2867e667.png" alt="Georgetown University"> 
+            <img class="swiper-slide slider-logo" src="https://prod-discovery.edx-cdn.org/organization/logos/36cfd0bb-1d18-4355-ae44-cb946573df3c-1e18515c3e4b.png" alt="Boston University"> 
+            <img class="swiper-slide slider-logo" src="https://prod-discovery.edx-cdn.org/organization/logos/eac96c61-1462-4084-a0b2-12525b74a9e1-8377159ff774.png" alt="The University of British Columbia"> 
+            <img class="swiper-slide slider-logo" src="https://prod-discovery.edx-cdn.org/organization/logos/0e54e104-1705-4479-80ec-5be6cac8b021-92ff94bde414.png" alt="The Hong Kong Polytechnic University"> 
+            <img class="swiper-slide slider-logo" src="https://prod-discovery.edx-cdn.org/organization/logos/1e6df8ed-a3fe-4307-99b9-775af509fcba-c733cde41f39.png" alt="Australian National University"> 
+            <img class="swiper-slide slider-logo" src="https://prod-discovery.edx-cdn.org/organization/logos/b7b5c4b8-9908-4caa-8e02-453a2a960b0b-9cda9ffb8e95.png" alt="Imperial College London"> 
+            <img class="swiper-slide slider-logo" src="https://prod-discovery.edx-cdn.org/organization/logos/697091f9-b97d-4d38-a7c5-621353e7551c-947eaa9afcfd.png" alt="Kyoto University"> 
+        </div>
+        <div class="swiper__button swiper-button-next"></div>
+        <div class="swiper__button swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
 
         <div class="slider__text">
             <p class="slider__text--red">+160</p>
@@ -150,7 +168,7 @@
                     <p class="courses__type">Curso</p>
                 </a>
             </li>
-            <li class="courses__item">
+            <li class="courses__item courses__item--4">
                 <a href="#">
                     <figure class="courses__logo">
                         <img src="https://prod-discovery.edx-cdn.org/organization/logos/44022f13-20df-4666-9111-cede3e5dc5b6-2cc39992c67a.png" alt="Hardvard"> 
@@ -252,6 +270,24 @@
     <p class="footer__body footer__rights container2">© 2021 edX Inc. All rights reserved.</p>
 </section>
 
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
+<script>
+  var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 5,
+        spaceBetween: 30,
+        slidesPerGroup: 5,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+</script>
 </body>
 </html>

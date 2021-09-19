@@ -5,6 +5,18 @@
 
 }
 
+@media all and (max-width: 1360px){
+    .courses__item--4{
+        display: none;
+    
+
+    }
+
+    .courses__list{
+        margin-right: 4em;
+    }
+}
+
 @media all and (max-width:1268px){
     .banner{
         justify-content: end;
