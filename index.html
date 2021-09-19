@@ -11,35 +11,38 @@
 </head>
 <body>
     <nav class="menu container">
-        <ul class="menu__left">
-            <li><a href="#">
-                <figure>
-                    <img class="menu__logo" src="./img/logo.png" alt="edX logo"> 
-                </figure>
-            </a></li>
-            <li class="menu__list-item">
-                <a href="#">Cursos</a>
-            </li>
-            <li class="menu__list-item">
-                <a href="#">Programas</a>
-            </li>
-            <li class="menu__list-item">
-                <a href="#">Universidades</a>
-            </li>
-        </ul>
-
-        <ul class="menu__right">
-            <li class="menu__list-item menu--light">
-                <a href="#">edX para Negocios</a>
-            </li>
-            <li>
-                <a href="#" class="btn btn--grey">Iniciar sesión</a>
-            </li>
-            <li>
-                <a href="#" class=" btn btn--red" >Registrarse</a>
-            </li>
-        </ul>
-
+        <figure>
+            <img class="menu__logo" src="./img/logo.png" alt="edX logo"> 
+        </figure>
+        <div class="menu__container" id="menu">
+            <ul class="menu__left">
+                <li class="menu__list-item">
+                    <a href="#">Cursos</a>
+                </li>
+                <li class="menu__list-item">
+                    <a href="#">Programas</a>
+                </li>
+                <li class="menu__list-item">
+                    <a href="#">Universidades</a>
+                </li>
+            </ul>
+    
+            <ul class="menu__right">
+                <li class="menu__list-item menu--light">
+                    <a href="#">edX para Negocios</a>
+                </li>
+                <li>
+                    <a href="#" class="btn btn--grey">Iniciar sesión</a>
+                </li>
+                <li>
+                    <a href="#" class=" btn btn--red" >Registrarse</a>
+                </li>
+            </ul>
+            <div id="close">x</div>
+        </div>
+        <button class="menu__action" id="openMenu">
+            <img src="./img/menu.png" alt="menu">
+        </button>
     </nav>
     
 
@@ -158,7 +161,7 @@
                     <p class="courses__type">Curso</p>
                 </a>
             </li>
-            <li class="courses__item">
+            <li class="courses__item courses__item--3">
                 <a href="#">
                     <figure class="courses__logo">
                         <img src="https://prod-discovery.edx-cdn.org/organization/logos/44022f13-20df-4666-9111-cede3e5dc5b6-2cc39992c67a.png" alt="Hardvard"> 
@@ -237,7 +240,7 @@
             </ul>
         </div>
 
-        <div>
+        <div class="footer__logos-column">
             <ul class="footer__logos-list">
                 <li class="footer__logos-img"><a href="#"><img src="./img/ig.png" alt="instagram"></a></li>
                 <li class="footer__logos-img"><a href="#"><img src="./img/tw.png" alt="twitter"></a></li>
@@ -269,7 +272,7 @@
     </div>
     <p class="footer__body footer__rights container2">© 2021 edX Inc. All rights reserved.</p>
 </section>
-
+<script src="./js/app.js"></script>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
 <script>

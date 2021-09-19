@@ -16,7 +16,6 @@ body{
     height: 80px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .container{
@@ -28,7 +27,20 @@ body{
     margin: 0 0 0 10em;
 }
 
+.menu__action{
+    display: none;
+}
 
+.menu__container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+#close{
+    display: none;
+}
 
 .menu__left{
     display: flex;
@@ -327,6 +339,7 @@ h3 {
 .phrase__text{
     color: #D23D29 ;
     margin-bottom: 1.5em;
+    margin-right: 2em;
 }
 
 .footer{
@@ -385,6 +398,9 @@ h3 {
     margin-top: 0.5em;
 }
 
+.footer__logos-column{
+    width:20%;
+}
 .footer__rights{
     margin-top: 3em;
 }
