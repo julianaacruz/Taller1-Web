@@ -8,6 +8,7 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
 }
 
 .menu{
@@ -52,6 +53,7 @@ body{
 a {
     text-decoration: none;
     color: #09262B;
+    font-size: 1em;
 }
 
 .menu__list-item {
@@ -193,7 +195,7 @@ h2 {
 
 p{
     color: #354547;
-
+    font-size: 1em;
 }
 
 h3 {
