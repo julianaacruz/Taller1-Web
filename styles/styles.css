@@ -9,6 +9,7 @@
 body{
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
+    overflow-x: hidden
 }
 
 .menu{
@@ -280,7 +281,7 @@ h3 {
     height: 240px;
     padding: 1.5em;
     box-sizing: border-box;
-    margin: 4em 0 4em 0;
+    margin: 4em 1em 4em 0;
     
 }
 
@@ -344,7 +345,8 @@ h3 {
 
 .footer{
     background-color: #09262B;
-    height: 350px;
+    bottom: auto;
+    padding-bottom: 4em;
 }
 
 .footer__logo{
@@ -352,18 +354,18 @@ h3 {
     height: 100px;
 }
 
-.footer__logos-img{
-    width: 50px;
-    height: 50px;
-}
-
-.footer__download-img{
-    width: 110px;
-}
 
 .footer__menu{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer__menu--options{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 50%;
 }
 
 .footer__list{

@@ -15,6 +15,19 @@
     .courses__list{
         margin-right: 4em;
     }
+
+    .footer__menu{
+        flex-direction: column-reverse;
+    }
+
+    .footer__menu--options{
+        width: 100%;
+    }
+
+    .newsletter{
+        margin: 3em 0;
+        justify-content: center;
+    }
 }
 
 
@@ -71,7 +84,7 @@
     }
 }
 
-@media all and (max-width:970px){
+@media all and (max-width:953px){
     .menu__action{
         display: block;
         background-color: transparent;
@@ -140,5 +153,70 @@
         font-family: 'Roboto Mono', monospace;
         color: #D23D29 ;
     }
+
+    .courses__list{
+        flex-wrap: wrap;
+    }
+
+    .courses__btn{
+        display: none;
+    }
+
+    .courses__more--container{
+        width: 100%;
+    }
+
+    .courses__other{
+        margin-top: 0em;
+        width: 100%;
+        }
+
+    .slider{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .slider__text{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    .slider__text--red{
+        display: inline;
+        margin-right: 0.3em;
+    }
+    .slider__text--grey{
+        display: inline;
+    }
+
 }
 
+@media all and (max-width:902px){
+    .courses__list{
+        flex-direction: column;
+    }
+
+    .courses__item{
+        width: 90%;
+        margin: 1em 1em 1em 0;
+        height: auto;
+        box-sizing: content-box;
+    }
+
+}
+
+@media all and (max-width:450px){
+    .container{
+        width: 100%;
+    }
+    .container2{
+        margin: 0 0 0 5em;
+    }
+
+    body{
+        font-size: 0.6em;
+    }
+
+}
