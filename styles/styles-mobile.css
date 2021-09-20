@@ -107,7 +107,7 @@
         display: block;
         position: fixed;
         width: 100%;
-        height: 35%;
+        height: 43%;
         background-color: #FFFFFF;
         top: 0;
         flex-direction: column;
@@ -376,8 +376,5 @@
         font-size: 1.7;
     }
 
-    .menu__container--mobile{
-        height: 50%;
-    }
 
 }
