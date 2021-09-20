@@ -291,7 +291,7 @@
 
     .phrase__body{
         margin: 1em;
-        padding: 4em 3em 5em 5em;
+        padding: 4em 2em 5em 5em;
         width: 100%;
 
     }
@@ -317,7 +317,7 @@
     }
 
     h3{
-        font-size: 1.8em;
+        font-size: 2em;
     }
 
     .banner__text{
@@ -350,13 +350,18 @@
     }
 
     p{
-        font-size: 1.3em;
+        font-size: 1.5em;
     }
 
     a{
-        font-size: 1.3em;
+        font-size: 1.5em;
     }
     span{
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
+
+    .footer__column2{
+        margin-right: 4em;
+    }
+
 }
