@@ -240,6 +240,7 @@ h3 {
 
 .characteristics__item{
     display: inline;
+    margin-left: 1em;
 }
 
 .characteristics__description{
