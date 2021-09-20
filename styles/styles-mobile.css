@@ -306,10 +306,18 @@
         box-sizing: border-box;
     }
 
+    .menu{
+        height: 70px;
+    }
+
+    .menu__logo{
+        height: 35px;
+        margin-left: 2em;
+    }
+
     .banner__image{
-        width: 95%;
-        display: flex;
-        align-self: flex-end;
+        width: 110%;
+        position: relative;
     }
 
     .courses__title{
@@ -369,7 +377,7 @@
     }
 
     .menu__container--mobile{
-        height: 40%;
+        height: 50%;
     }
 
 }
