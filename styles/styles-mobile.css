@@ -368,4 +368,8 @@
         font-size: 1.7;
     }
 
+    .menu__container--mobile{
+        height: 50%;
+    }
+
 }
