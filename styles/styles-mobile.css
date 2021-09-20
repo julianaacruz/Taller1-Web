@@ -63,7 +63,7 @@
     }
 
     .footer__logos-column{
-        width: 18%;
+        width: 200px;
         margin: 0 1em;
     }
 
@@ -167,8 +167,10 @@
     }
 
     .courses__other{
-        margin-top: 0em;
+        margin-top: 2em;
         width: 100%;
+        display: flex;
+        align-self:center;
         }
 
     .slider{
@@ -205,9 +207,55 @@
         box-sizing: content-box;
     }
 
+    .banner{
+        flex-direction: column;
+    }
+
+    .banner__text{
+        width: 80%;
+    }
+
+    .banner__title{
+        margin: 1.5em 0 0.5em;    
+    }
+
+    .banner__image{
+        width: 80%;
+        display: flex;
+        align-self: flex-end;
+    }
+
 }
 
-@media all and (max-width:450px){
+@media all and (max-width:760px){
+    .characteristics__image{
+        display: none;
+    }
+
+    .container2{
+        margin: 0 0 0 7em;
+    }
+    .characteristics__text{
+        margin: 0 3em 0 7em;
+    }
+
+    .btn--green{
+        display: flex;
+        align-self:center;
+        margin: 3em 0;
+    }
+
+    .footer__menu--options{
+        margin-bottom: 6em;
+    }
+
+    .footer__logos-column{
+        margin-top: 3em;
+    }
+}
+
+
+@media all and (max-width:578px){
     .container{
         width: 100%;
     }
@@ -216,7 +264,88 @@
     }
 
     body{
-        font-size: 0.6em;
+        font-size: 0.55em;
     }
 
+    .phrase__author{
+        margin-right: 1em;
+    }
+
+    .characteristics__text{
+        margin: 0 5em 0 7em;
+    }
+
+    .newsletter{
+        margin-bottom: 7em;
+    }
+
+    
+
+}
+
+
+@media all and (max-width:500px){
+    .phrase{
+        flex-direction: column;
+    }
+
+    .phrase__body{
+        margin: 1em;
+        padding: 4em 3em 5em 5em;
+        width: 100%;
+
+    }
+    .characteristics__text{
+        margin: 0 5em 0 5em;
+    }
+
+    .form__input{
+        padding: 1em;
+        width: 18em;
+        border: 0em;
+        box-sizing: border-box;
+    }
+
+    .banner__image{
+        width: 95%;
+        display: flex;
+        align-self: flex-end;
+    }
+
+    .courses__title{
+        margin-bottom: 1em;
+    }
+
+    h3{
+        font-size: 2em;
+    }
+
+    .banner__text{
+        width: 85%;
+    }
+
+    .courses {
+        margin:0;
+    }
+
+    .btn{
+        font-weight: 600;
+        padding: 1.5em;
+        box-sizing: border-box;
+    
+    }
+
+    .courses__item{
+        padding: 2.5em;
+        margin: 2em 2em 2em 0;
+        
+    }
+
+    .characteristics__button {
+        margin-bottom: 3em;
+    }
+
+    .slider {
+        padding: 4em 3em 3em 5em;
+    }
 }

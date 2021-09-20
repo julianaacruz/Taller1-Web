@@ -86,7 +86,6 @@ a {
     padding: 1em;
     box-sizing: border-box;
 
-
 }
 
 .btn--grey{
@@ -376,6 +375,7 @@ h3 {
     list-style: none;
     display: flex;
     margin-bottom: 2em;
+    margin-top: 2em;
 }
 
 .footer__download-list{
@@ -401,7 +401,7 @@ h3 {
 }
 
 .footer__logos-column{
-    width:20%;
+    width:30%;
 }
 .footer__rights{
     margin-top: 3em;
