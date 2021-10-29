@@ -164,6 +164,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .courses .products .product {
@@ -175,7 +178,7 @@ img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-decoration: none !important;
-  margin: 0 20px 20px 0;
+  margin: 20px 20px 20px 0;
 }
 
 .courses .products .product__image {
@@ -186,8 +189,9 @@ img {
 }
 
 .courses .products .product__logo {
-  width: 113.85px;
-  height: 55px;
+  width: 120px;
+  height: 60px;
+  padding: 5px;
   background: #FFFFFF;
   border: 1px solid rgba(9, 38, 43, 0.5);
   position: relative;
@@ -213,12 +217,12 @@ img {
   text-decoration: none !important;
   color: rgba(9, 38, 43, 0.5);
   font-size: 1em;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .courses .products .product__description .product__price {
   text-decoration: none !important;
-  color: #D23D29;
+  color: #09262B;
   font-size: 1em;
   margin-bottom: 10px;
   font-size: 1.2em;
@@ -228,6 +232,10 @@ img {
   background-color: #D23D29;
   color: #FFFFFF !important;
   border: none;
+}
+
+.courses .products .product__description .btn--cart:disabled {
+  background-color: rgba(9, 38, 43, 0.5);
 }
 
 .footer {

@@ -51,6 +51,27 @@
 
     <div class="courses__header container3">
         <h1 class="courses__title">Todos los cursos</h1>
+        <div class="filters">
+            <div>
+                <label for="categories">Filtrar por:</label>
+                <select name="categories" id="categories">
+                    <option value="">Todos los cursos</option>
+                    <option value="consoles">Ciencia de datos</option>
+                    <option value="games">Informática</option>
+                    <option value="accesories">Idiomas</option>
+                </select>
+            </div>
+    
+            <div>
+                <label for="orderBy">Ordenar por:</label>
+                <select name="orderBy" id="orderBy">
+                    <option value="">Selecciona una opción</option>
+                    <option value="asc">Precio: De menor a mayor</option>
+                    <option value="desc">Precio: De mayor a menor</option>
+                </select>
+            </div>
+        </div>
+
     </div>
 
     <div class="products container3" id="products">
@@ -61,27 +82,12 @@
             </figure>
             
             <div class="product__description">
-                <p class="product__name">Data Science: Machine Learning</p>
+                <p class="product__name">Curso de prueba para probar el css</p>
                 <p class="product__university">HarvardX</p>
                 <p class="product__price">$820.000</p>
                 <button class="btn btn--cart">Añadir al carrito</button>
             </div>
         </a>
-
-        <a class="product" href="">
-            <img src="https://microsofters.com/wp-content/uploads/2020/10/Las-novedades-de-Microsoft-Excel.jpg" alt="" class="product__image">
-            <figure class="product__logo">
-                <img src="https://prod-discovery.edx-cdn.org/organization/logos/54bc81cb-b736-4505-aa51-dd2b18c61d84-2082c7ba1024.png" alt="Berkeley">
-            </figure>
-            
-            <div class="product__description">
-                <p class="product__name">Excel avanzado: importación y análisis de datos</p>
-                <p class="product__university">Berkeley University</p>
-                <p class="product__price">$590.000</p>
-                <button class="btn btn--cart">Añadir al carrito</button>
-            </div>
-        </a>
-
     </div>
 
 </section>
@@ -153,5 +159,6 @@
     <p class="footer__body footer__rights container2">© 2021 edX Inc. All rights reserved.</p>
 </section>
 
+<script src="./js/courses.js"></script>
 </body>
 </html>

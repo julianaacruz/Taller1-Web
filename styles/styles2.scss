@@ -166,6 +166,8 @@ img{
     
     .products{
         display: flex;
+        overflow-x: hidden;
+        box-sizing: border-box;
     
         .product{
             display: block;
@@ -175,7 +177,7 @@ img{
             border: 1px solid $green-30;
             box-sizing: border-box;
             text-decoration: none !important;
-            margin: 0 20px 20px 0;
+            margin: 20px 20px 20px 0;
         
             &__image{
                 height: 80px;
@@ -184,8 +186,9 @@ img{
             }
         
             &__logo{
-                width: 113.85px;
-                height: 55px;
+                width: 120px;
+                height: 60px;
+                padding: 5px;
                 background: #FFFFFF;
                 border: 1px solid $green-50;
                 position: relative;
@@ -206,12 +209,12 @@ img{
                 .product__university{
                     font-weight: 400;
                     @include link($green-50);
-                    margin-bottom: 10px;
+                    margin-bottom: 15px;
         
                 }
         
                 .product__price{
-                    @include link($red);
+                    @include link($green);
                     margin-bottom: 10px;
                     font-size: $medium;
                 }
@@ -220,6 +223,10 @@ img{
                     background-color: $red;
                     color: $white !important;
                     border: none;
+
+                    &:disabled{
+                        background-color: $green-50;
+                    }
                 }
         
             }
