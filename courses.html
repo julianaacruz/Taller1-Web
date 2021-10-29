@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos</title>
+    <link rel="stylesheet" href="./styles/styles2.css">
+</head>
+<body>
+    <nav class="menu container">
+        <figure class="menu__figure">
+            <img class="menu__logo" src="./img/logo.png" alt="edX logo"> 
+        </figure>
+        <div class="menu__container" id="menu">
+            <ul class="menu__left">
+                <li class="menu__list-item">
+                    <a href="#">Cursos</a>
+                </li>
+                <li class="menu__list-item">
+                    <a href="#">Programas</a>
+                </li>
+                <li class="menu__list-item">
+                    <a href="#">Universidades</a>
+                </li>
+            </ul>
+    
+            <ul class="menu__right">
+                <li class="menu__list-item menu--light">
+                    <a href="#">edX para Negocios</a>
+                </li>
+                <li>
+                    <a href="#" class="btn btn--grey">Iniciar sesión</a>
+                </li>
+                <li>
+                    <a href="#" class=" btn btn--red" >Registrarse</a>
+                </li>
+            </ul>
+            <div id="close">x</div>
+        </div>
+        <button class="menu__action" id="openMenu">
+            <img src="./img/menu.png" alt="menu">
+        </button>
+    </nav>
+
+
+<section class="courses container">
+    <div class="breadcrumbs container3">
+        <p class="breadcrumb">Cursos > Todos los cursos</p>
+    </div>
+
+    <div class="courses__header container3">
+        <h1 class="courses__title">Todos los cursos</h1>
+    </div>
+
+    <div class="products container3" id="products">
+        <a class="product" href="">
+            <img src="https://dbibyhavas.io/es/wp-content/uploads/sites/5/2020/09/diferencias-machine-learning-big-data-y-data-science-1024x379.jpg" alt="" class="product__image">
+            <figure class="product__logo">
+                <img src="https://prod-discovery.edx-cdn.org/organization/logos/44022f13-20df-4666-9111-cede3e5dc5b6-2cc39992c67a.png" alt="Hardvard">
+            </figure>
+            
+            <div class="product__description">
+                <p class="product__name">Data Science: Machine Learning</p>
+                <p class="product__university">HarvardX</p>
+                <p class="product__price">$820.000</p>
+                <button class="btn btn--cart">Añadir al carrito</button>
+            </div>
+        </a>
+
+        <a class="product" href="">
+            <img src="https://microsofters.com/wp-content/uploads/2020/10/Las-novedades-de-Microsoft-Excel.jpg" alt="" class="product__image">
+            <figure class="product__logo">
+                <img src="https://prod-discovery.edx-cdn.org/organization/logos/54bc81cb-b736-4505-aa51-dd2b18c61d84-2082c7ba1024.png" alt="Berkeley">
+            </figure>
+            
+            <div class="product__description">
+                <p class="product__name">Excel avanzado: importación y análisis de datos</p>
+                <p class="product__university">Berkeley University</p>
+                <p class="product__price">$590.000</p>
+                <button class="btn btn--cart">Añadir al carrito</button>
+            </div>
+        </a>
+
+    </div>
+
+</section>
+
+<section class="footer container">
+    <figure class="footer__logo container2">
+        <img src="./img/logo__white.png" alt="edx logo">
+    </figure>
+    <div class="footer__menu container2">
+        <div class="footer__menu--options">
+            <div>
+                <p class="footer__title">
+                    edx
+                </p>
+                <ul class="footer__list">
+                    <li class="footer__body"><a href="#">Acerca de</a></li>
+                    <li class="footer__body"><a href="#">edX para Negocios</a></li>
+                    <li class="footer__body"><a href="#">Afiliados</a></li>
+                    <li class="footer__body"><a href="#">Carreras</a></li>
+                    <li class="footer__body"><a href="#">Noticias</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer__column2">
+                <p class="footer__title">
+                    Contacto
+                </p>
+                <ul class="footer__list">
+                    <li class="footer__body"><a href="#">Blog</a></li>
+                    <li class="footer__body"><a href="#">Contáctanos</a></li>
+                    <li class="footer__body"><a href="#">Centro de ayuda</a></li>
+                    <li class="footer__body"><a href="#">Kit de prensa</a></li>
+                    <li class="footer__body"><a href="#">Donar</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer__logos-column">
+                <ul class="footer__logos-list">
+                    <li class="footer__logos-img"><a href="#"><img src="./img/ig.png" alt="instagram"></a></li>
+                    <li class="footer__logos-img"><a href="#"><img src="./img/tw.png" alt="twitter"></a></li>
+                    <li class="footer__logos-img"><a href="#"><img src="./img/linkedin.png" alt="linkedin"></a></li>
+                    <li class="footer__logos-img"><a href="#"><img src="./img/fb.png" alt="facebook"></a></li>
+                </ul>
+    
+                <ul class="footer__download-list">
+                    <li class="footer__download-img"><img src="./img/appstore.png" alt="appstore"></li>
+                    <li class="footer__download-img"><img src="./img/googleplay.png" alt="googleplay"></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="newsletter">
+            <p class="newsletter__title">
+                Suscríbete a nuestro newsletter
+            </p>
+
+            <p class="footer__body">
+                No te pierdas de las novedades y promociones especiales que tendremos para ti
+            </p>
+
+            <form class="newsletter__form">
+                <input class="form__input" type="text" placeholder="Correo electrónico">
+                <input class="input__button" type="submit" value="Suscríbete">
+            </form>
+        </div>
+
+    </div>
+    <p class="footer__body footer__rights container2">© 2021 edX Inc. All rights reserved.</p>
+</section>
+
+</body>
+</html>

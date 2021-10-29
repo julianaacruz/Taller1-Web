@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+$green: #09262B;
+$green-50: rgba(9, 38, 43, 0.5);
+$green-30: rgba(9, 38, 43, 0.3);
+$cream: #F2F0EF;
+$white: #FFFFFF;
+$red: #D23D29;
+$small: 1em;
+$medium: 1.2em;
+$subtitle: 1.7em;
+$title: 3.5em;
+$mono:'Roboto Mono', monospace;
+$sans: 'Open Sans', sans-serif;
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $sans;
+    font-size: $small;
+    overflow-x: hidden
+}
+
+.container{
+    width: 1440px;
+    box-sizing: border-box;
+}
+
+.container2{
+    margin: 0 0 0 10em;
+}
+
+.container3{
+    margin: 0 0 0 4em;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@mixin link ($color) {
+    text-decoration: none !important;
+    color: $color;
+    font-size: 1em;
+}
+
+
+.menu{
+    background-color: $white;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+    &__action{
+        display: none;
+    }
+    
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .menu__left{
+            display: flex;
+            align-items: center;
+            list-style: none;
+            justify-content: start;
+        }
+        
+        .menu__right{
+            display: flex;
+            align-items: center;
+            list-style: none;
+            justify-content: end;
+            
+        }
+    
+    }
+
+    #close{
+        display: none;
+    }
+    
+
+    &__logo{
+        height: 50px;
+        margin-right: 5em;
+        
+    }
+
+    a {
+        @include link($green);
+    }
+    
+    &__list-item {
+        margin: 0px 30px;
+        color: $green;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    
+    &--light{
+        font-weight: 400;
+    }
+}
+
+.btn{
+    font-weight: 600;
+    padding: 1em;
+    box-sizing: border-box;
+
+    &--grey{
+        background-color: $cream;
+    }
+
+    &--red{
+        background-color: $red;
+        margin: 1em;
+        color: $white !important;
+        
+    }
+
+}
+
+.form__input{
+    padding: 1em;
+    width: 22em;
+    border: 0em;
+    box-sizing: border-box;
+
+}
+
+.input__button{
+    background-color: #D23D29;
+    padding: 1em;
+    margin: 0.5em;
+    border: 0em;
+    color: ghostwhite;
+    box-sizing: border-box;
+
+}
+
+.courses{
+
+    .breadcrumb{
+        font-family: $mono;
+        padding: 25px 0 25px 0;
+        color: $green-50;
+    }
+
+    &__title{
+        font-size: $subtitle;
+        color: $green;
+        margin-bottom: 20px;
+     }
+    
+    .products{
+        display: flex;
+    
+        .product{
+            display: block;
+            width: 300px;
+            border-radius: 10px;
+            background-color: $white;
+            border: 1px solid $green-30;
+            box-sizing: border-box;
+            text-decoration: none !important;
+            margin: 0 20px 20px 0;
+        
+            &__image{
+                height: 80px;
+                object-fit: cover;
+                border-radius: 10px 10px 0 0;
+            }
+        
+            &__logo{
+                width: 113.85px;
+                height: 55px;
+                background: #FFFFFF;
+                border: 1px solid $green-50;
+                position: relative;
+                top: -30px;
+                left: 20px;
+            }
+        
+            &__description{
+                padding: 0px 20px 20px 20px;
+        
+                .product__name{
+                    @include link($green);
+                    font-weight: 700;
+                    margin-bottom: 5px;
+                    font-size: $medium;
+                }
+        
+                .product__university{
+                    font-weight: 400;
+                    @include link($green-50);
+                    margin-bottom: 10px;
+        
+                }
+        
+                .product__price{
+                    @include link($red);
+                    margin-bottom: 10px;
+                    font-size: $medium;
+                }
+        
+                .btn--cart{
+                    background-color: $red;
+                    color: $white !important;
+                    border: none;
+                }
+        
+            }
+        }
+    }
+    
+
+}
+
+
+.footer{
+    background-color: $green;
+    bottom: auto;
+    padding-bottom: 4em;
+
+    &__logo{
+        width: 100px;
+        height: 100px;
+    }
+    
+    &__menu{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &--options{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 50%;
+
+            .footer__title{
+                color: $white;
+                font-weight: 700;
+                margin-bottom: 1em;
+            }
+
+            .footer__list{
+                list-style: none;
+
+                .footer__body a{
+                    color: #f9f9f9dc;
+                    margin-top: 0.5em;
+                }
+            }
+        }
+    }
+    
+    &__logos-column{
+        width:30%;
+
+        .footer__logos-list{
+            list-style: none;
+            display: flex;
+            margin-bottom: 2em;
+            margin-top: 2em;
+        }
+
+        .footer__download-list{
+            list-style: none;
+            display: flex;
+            margin-top: 2em;
+        }
+    } 
+
+    &__body{
+        color: $white;
+        margin-top: 0.5em;
+    }
+      
+    &__rights{
+        margin-top: 3em;
+    }
+
+    .newsletter{
+        margin-right: 3em;
+        margin-left: 2em;
+
+        &__title{
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 1.5em;
+        }
+    
+        &__form{
+            margin-top: 2em;
+        }
+    }
+    
+}
+

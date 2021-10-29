@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 1440px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container2 {
+  margin: 0 0 0 10em;
+}
+
+.container3 {
+  margin: 0 0 0 4em;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.menu {
+  background-color: #FFFFFF;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.menu__action {
+  display: none;
+}
+
+.menu__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.menu__container .menu__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.menu__container .menu__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.menu #close {
+  display: none;
+}
+
+.menu__logo {
+  height: 50px;
+  margin-right: 5em;
+}
+
+.menu a {
+  text-decoration: none !important;
+  color: #09262B;
+  font-size: 1em;
+}
+
+.menu__list-item {
+  margin: 0px 30px;
+  color: #09262B;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.menu--light {
+  font-weight: 400;
+}
+
+.btn {
+  font-weight: 600;
+  padding: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.btn--grey {
+  background-color: #F2F0EF;
+}
+
+.btn--red {
+  background-color: #D23D29;
+  margin: 1em;
+  color: #FFFFFF !important;
+}
+
+.form__input {
+  padding: 1em;
+  width: 22em;
+  border: 0em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.input__button {
+  background-color: #D23D29;
+  padding: 1em;
+  margin: 0.5em;
+  border: 0em;
+  color: ghostwhite;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.courses .breadcrumb {
+  font-family: "Roboto Mono", monospace;
+  padding: 25px 0 25px 0;
+  color: rgba(9, 38, 43, 0.5);
+}
+
+.courses__title {
+  font-size: 1.7em;
+  color: #09262B;
+  margin-bottom: 20px;
+}
+
+.courses .products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.courses .products .product {
+  display: block;
+  width: 300px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(9, 38, 43, 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none !important;
+  margin: 0 20px 20px 0;
+}
+
+.courses .products .product__image {
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.courses .products .product__logo {
+  width: 113.85px;
+  height: 55px;
+  background: #FFFFFF;
+  border: 1px solid rgba(9, 38, 43, 0.5);
+  position: relative;
+  top: -30px;
+  left: 20px;
+}
+
+.courses .products .product__description {
+  padding: 0px 20px 20px 20px;
+}
+
+.courses .products .product__description .product__name {
+  text-decoration: none !important;
+  color: #09262B;
+  font-size: 1em;
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+
+.courses .products .product__description .product__university {
+  font-weight: 400;
+  text-decoration: none !important;
+  color: rgba(9, 38, 43, 0.5);
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.courses .products .product__description .product__price {
+  text-decoration: none !important;
+  color: #D23D29;
+  font-size: 1em;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.courses .products .product__description .btn--cart {
+  background-color: #D23D29;
+  color: #FFFFFF !important;
+  border: none;
+}
+
+.footer {
+  background-color: #09262B;
+  bottom: auto;
+  padding-bottom: 4em;
+}
+
+.footer__logo {
+  width: 100px;
+  height: 100px;
+}
+
+.footer__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer__menu--options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 50%;
+}
+
+.footer__menu--options .footer__title {
+  color: #FFFFFF;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.footer__menu--options .footer__list {
+  list-style: none;
+}
+
+.footer__menu--options .footer__list .footer__body a {
+  color: #f9f9f9dc;
+  margin-top: 0.5em;
+}
+
+.footer__logos-column {
+  width: 30%;
+}
+
+.footer__logos-column .footer__logos-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
+.footer__logos-column .footer__download-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2em;
+}
+
+.footer__body {
+  color: #FFFFFF;
+  margin-top: 0.5em;
+}
+
+.footer__rights {
+  margin-top: 3em;
+}
+
+.footer .newsletter {
+  margin-right: 3em;
+  margin-left: 2em;
+}
+
+.footer .newsletter__title {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.footer .newsletter__form {
+  margin-top: 2em;
+}
+/*# sourceMappingURL=styles2.css.map */
