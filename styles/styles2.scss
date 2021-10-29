@@ -38,7 +38,7 @@ body{
 }
 
 .container3{
-    margin: 0 0 0 4em;
+    margin: 0 3em 0 4em;
 }
 
 img{
@@ -163,11 +163,17 @@ img{
         color: $green;
         margin-bottom: 20px;
      }
+
+    .filters{
+        display: flex;
+        justify-content: space-between;
+    }
     
     .products{
         display: flex;
         overflow-x: hidden;
         box-sizing: border-box;
+        margin-bottom: 20px;
     
         .product{
             display: block;

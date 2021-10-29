@@ -24,7 +24,7 @@ body {
 }
 
 .container3 {
-  margin: 0 0 0 4em;
+  margin: 0 3em 0 4em;
 }
 
 img {
@@ -160,6 +160,15 @@ img {
   margin-bottom: 20px;
 }
 
+.courses .filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .courses .products {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -167,6 +176,7 @@ img {
   overflow-x: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
 .courses .products .product {
