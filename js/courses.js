@@ -3,11 +3,13 @@ const products = [
         id: 1,
         name: "Data Science: Machine Learning",
         price: 820000,
+        description: "Cree un sistema de recomendación de películas y aprenda la ciencia detrás de una de las técnicas de ciencia de datos más populares y exitosas.",
         image: "https://dbibyhavas.io/es/wp-content/uploads/sites/5/2020/09/diferencias-machine-learning-big-data-y-data-science-1024x379.jpg",
         logo: "https://prod-discovery.edx-cdn.org/organization/logos/44022f13-20df-4666-9111-cede3e5dc5b6-2cc39992c67a.png",
         university: "HarvardX",
         level: "Intermedio",
         type: "data science",
+        about: "Quizás las metodologías de ciencia de datos más populares provienen del aprendizaje automático. Lo que distingue al aprendizaje automático de otros procesos de decisión guiados por computadora es que crea algoritmos de predicción utilizando datos. Algunos de los productos más populares que utilizan el aprendizaje automático incluyen los lectores de escritura a mano implementados por el servicio postal, el reconocimiento de voz, los sistemas de recomendación de películas y los detectores de spam. En este curso, parte de nuestro Programa de certificación profesional en ciencia de datos, aprenderá algoritmos populares de aprendizaje automático, análisis de componentes principales y regularización mediante la creación de un sistema de recomendación de películas.",
         instructor: "Rafael Irrizarry"
     },
     {
@@ -19,6 +21,7 @@ const products = [
         university: "Berkeley XUniversity",
         level: "Avanzado",
         type: "computers",
+        about: "",
         instructor: "Steve Johnson"
     },
     {
@@ -30,6 +33,7 @@ const products = [
         university: "Universidad del Rosario",
         level: "Básico",
         type: "languages",
+        about: "",
         instructor: "Margareth Harrison"
     },
     {
@@ -41,6 +45,7 @@ const products = [
         university: "Sorbonne Université",
         level: "Intermedio",
         type: "languages",
+        about: "",
         instructor: "Carla Gagnon"
     }
 ];

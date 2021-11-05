@@ -118,6 +118,7 @@ img {
   padding: 1em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border: none;
 }
 
 .btn--grey {
@@ -340,5 +341,19 @@ img {
 
 .footer .newsletter__form {
   margin-top: 2em;
+}
+
+.product__image {
+  height: 300px;
+}
+
+.product__image .product__mainImage {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.product__description {
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 /*# sourceMappingURL=styles2.css.map */
