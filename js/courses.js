@@ -21,7 +21,7 @@ const products = [
         university: "Berkeley XUniversity",
         level: "Avanzado",
         type: "computers",
-        about: "",
+        about: "Lorem ipsum dolor sit amet consectetur adipiscing elit eget cubilia ante et, venenatis in accumsan nullam morbi hendrerit taciti porttitor natoque porta varius magnis, metus montes nibh auctor nulla dapibus turpis rhoncus fames vulputate.",
         instructor: "Steve Johnson"
     },
     {
@@ -33,7 +33,7 @@ const products = [
         university: "Universidad del Rosario",
         level: "Básico",
         type: "languages",
-        about: "",
+        about: "Lorem ipsum dolor sit amet consectetur adipiscing elit eget cubilia ante et, venenatis in accumsan nullam morbi hendrerit taciti porttitor natoque porta varius magnis, metus montes nibh auctor nulla dapibus turpis rhoncus fames vulputate.",
         instructor: "Margareth Harrison"
     },
     {
@@ -45,7 +45,7 @@ const products = [
         university: "Sorbonne Université",
         level: "Intermedio",
         type: "languages",
-        about: "",
+        about: "Lorem ipsum dolor sit amet consectetur adipiscing elit eget cubilia ante et, venenatis in accumsan nullam morbi hendrerit taciti porttitor natoque porta varius magnis, metus montes nibh auctor nulla dapibus turpis rhoncus fames vulputate.",
         instructor: "Carla Gagnon"
     }
 ];

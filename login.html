@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./styles/styles2.css">
+</head>
+<body class="register container">
+    <div class="register__square">
+        <figure class="register__figure">
+            <img class="register__logo" src="./img/logo.png" alt="edX logo"> 
+        </figure>
+        <h1 class="register__title">Comienza a aprender con edX</h1>
+    </div>
+    <aside class="register__side">
+        <a href="#" class="register__subtitle">Registrarse</a>
+        <a href="#" class="register__subtitle">Iniciar sesión</a>
+
+        <form class="register__form" action="" id="register">
+            <input class="form__input register__input" type="text" name="name" placeholder="Nombre completo">
+            <input class="form__input register__input" type="text" name="email" placeholder="Correo electrónico">
+            <input class="form__input register__input" type="password" name="password" placeholder="Contraseña">
+            <select class="form__input register__input" name="country" id="country">
+                <option value="">País</option>
+                <option value="help">¿Cómo pongo los paises?</option>
+            </select>
+            <input class="input__button" type="submit" value="Registrarme">
+
+        </aside>
+    
+
+    </form>
+    <script type="module" src="./js/auth.js"></script>
+</body>
+</html>

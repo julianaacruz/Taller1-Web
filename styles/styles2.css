@@ -149,6 +149,10 @@ img {
           box-sizing: border-box;
 }
 
+.courses__banner {
+  margin-bottom: 10px;
+}
+
 .courses .breadcrumb {
   font-family: "Roboto Mono", monospace;
   padding: 25px 0 25px 0;
@@ -355,5 +359,51 @@ img {
 .product__description {
   margin-top: 30px;
   margin-bottom: 40px;
+}
+
+.register {
+  background-color: #F2F0EF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.register__square {
+  background-color: #09262B;
+  width: 50%;
+  height: 820px;
+  padding: 10px 50px;
+  display: block;
+  -ms-grid-column-align: left;
+      justify-self: left;
+}
+
+.register__side {
+  padding: 50px;
+}
+
+.register__logo {
+  height: 50px;
+}
+
+.register__title {
+  font-size: 3.5em;
+  color: #FFFFFF;
+}
+
+.register__form {
+  margin-top: 30px;
+}
+
+.register__form .register__input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.register__subtitle {
+  color: #09262B;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  margin-right: 10px;
 }
 /*# sourceMappingURL=styles2.css.map */
