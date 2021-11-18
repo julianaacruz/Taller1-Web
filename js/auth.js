@@ -31,5 +31,14 @@ registerForm.addEventListener("submit", e=> {
 
 
 const createUser = async (email,password) =>{
-    await createUserWithEmailAndPassword(auth,email,password);
+    try{
+        await createUserWithEmailAndPassword(auth,email,password);
+    } catch (e){
+        if (e.code === "auth/email-already-in-use") {
+            console.log("Correo electrónico en uso...")
+        }
+        if (e.code === "auth/weak-password") {
+            console.log("Intenta con una contraseña más segura...")
+        }
+    }
 }

@@ -10,7 +10,14 @@ const products = [
         level: "Intermedio",
         type: "data science",
         about: "Quizás las metodologías de ciencia de datos más populares provienen del aprendizaje automático. Lo que distingue al aprendizaje automático de otros procesos de decisión guiados por computadora es que crea algoritmos de predicción utilizando datos. Algunos de los productos más populares que utilizan el aprendizaje automático incluyen los lectores de escritura a mano implementados por el servicio postal, el reconocimiento de voz, los sistemas de recomendación de películas y los detectores de spam. En este curso, parte de nuestro Programa de certificación profesional en ciencia de datos, aprenderá algoritmos populares de aprendizaje automático, análisis de componentes principales y regularización mediante la creación de un sistema de recomendación de películas.",
-        instructor: "Rafael Irrizarry"
+        instructor: "Rafael Irrizarry",
+        comments: [
+            {
+                name:"",
+                comment:"",
+                image:""
+            }
+        ]
     },
     {
         id: 2,
@@ -67,7 +74,7 @@ const productTemplate = (item) => {
 
     let buttonHtml;
     if (isAdded) {
-        buttonHtml = `<button class="btn btn--cart" disabled>Curso añadido</button>`
+        buttonHtml = `<button class="btn btn--cart" disabled>Añadido al carrito</button>`
     } else {
         buttonHtml = `<button class="btn btn--cart">Añadir al carrito</button>`;
     }
@@ -107,6 +114,7 @@ const productTemplate = (item) => {
 
         // Deshabilitar botón carrito
         productCartButton.setAttribute("disabled", true);
+        productCartButton.innerText="Añadido al carrito";
 
     });
 

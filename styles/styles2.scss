@@ -172,7 +172,11 @@ img{
         display: flex;
         justify-content: space-between;
     }
-    
+    &__input{
+        border: 1px;
+        border-color: $green-50;
+        background-color: $cream;
+    }
     .products{
         display: flex;
         overflow-x: hidden;
