@@ -18,14 +18,19 @@
         <a href="Register.html" class="register__subtitle">Registrarse</a>
         <a href="login.html" class="register__subtitle">Iniciar sesión</a>
 
-        <form class="register__form login" action="" id="register">
-            <h2>Iniciar sesión</h2>
+        <form class="register__form" action="" id="register">
+            <h2>Registro</h2>
+            <input class="form__input register__input" type="text" name="firstname" placeholder="Nombre ">
+            <input class="form__input register__input" type="text" name="lastname" placeholder="Apellido">
+            <input class="form__input register__input" type="text" name="direction" placeholder="Dirección">
+            <input class="form__input register__input" type="number" name="credit" placeholder="Numero de tarjeta de crédito">
             <input class="form__input register__input" type="text" name="email" placeholder="Correo electrónico">
             <input class="form__input register__input" type="password" name="password" placeholder="Contraseña">
-            <p class="form__error hidden">
-                Información inválida, intente de nuevo.
-              </p>
-            <input class="input__button" type="submit" value="Ingresar">
+            <select class="form__input register__input" name="country" id="country">
+                <option value="">País</option>
+                <option value="help">¿Cómo pongo los paises?</option>
+            </select>
+            <input class="input__button" type="submit" value="Registrarme">
         </form>
         </aside>
     <!-- 
@@ -76,9 +81,11 @@
     -->
     
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
     <script src="./js/firebase.js"></script>
-    <script src="./js/login.js"></script>
+    <script src="./js/register.js"></script>
 
 <!--  <script type="module" src="./js/auth.js"></script>-->
 </body>

@@ -30,19 +30,37 @@
                     <a href="#">edX para Negocios</a>
                 </li>
                 <li>
-                    <a href="#" class="btn btn--grey">Iniciar sesión</a>
-                </li>
-                <li>
-                    <a href="./login.html" class=" btn btn--red" >Registrarse</a>
+                    <a href="cart.html">
+                    <svg width="34" height="28" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.9448 24.1505C23 24.1505 22.2338 24.9164 22.2338 25.8616C22.2338 26.8065 23 27.5727 23.9448 27.5727C24.8897 27.5727 25.6559 26.8065 25.6559 25.8616C25.6559 24.916 24.8897 24.1505 23.9448 24.1505ZM10.6769 24.1505C9.73197 24.1505 8.96576 24.9164 8.96576 25.8616C8.96576 26.8065 9.73197 27.5727 10.6769 27.5727C11.6217 27.5727 12.3879 26.8065 12.3879 25.8616C12.3879 24.916 11.6217 24.1505 10.6769 24.1505ZM29.1801 18.2366L33.9582 4.2327H8.69127L7.30871 0H0L0.72046 2.52161H5.47946L10.3663 17.483L8.59761 23.2049H27.4448L28.1653 20.6833H11.9503L12.8083 18.2366H29.1801Z" fill="#09262B"/>
+                        </svg>
+                    </a>
                 </li>
             </ul>
             <div id="close">x</div>
+            <div class="auth">
+
+                <div class="auth__without hidden">
+                  <a href="login.html"  class="link btn btn--grey">Iniciar sesión</a>
+                  <a href="register.html"  class="link btn btn--red">Registrarse</a>
+                </div>
+                <div class="auth__with hidden">
+                  <a style="color: #C2933A;" href="#" class="auth__profile link">
+                    <span></span>
+                  </a>
+                  <a class="showadmin hidden link" style="color: #6C0E23;" href="/admin.html">Administrador</a>
+                  <br>
+                  <a style="color: rgb(0, 0, 253);" href="#" class="auth__signout link" >
+                    Cerrar sesión
+                  </a>
+                  
+                </div>
+              </div>
         </div>
         <button class="menu__action" id="openMenu">
             <img src="./img/menu.png" alt="menu">
         </button>
     </nav>
-
 
     <div class="product container">
 
@@ -53,13 +71,13 @@
 
         <div class="product__description container2">
 
-            <h1 class="product__name" id="productName">Nombre del producto</h1>
+            <h1 class="product__name" id="productName">Cargando....</h1>
             <p class="product__university" id="productUniversity"></p>
             <p class="product__paragraph" id="productDescription"></p> 
 
             <h3 class="product__price" id="productPrice"></h3>
 
-            <button class="product__addToCart btn btn--cart">Añadir al carrito</button>
+            <button class="product__addToCart btn btn--red">Añadir al carrito</button>
 
 
         </div>
@@ -135,7 +153,11 @@
         <p class="footer__body footer__rights container2">© 2021 edX Inc. All rights reserved.</p>
     </section>
 
-    <script src="js/courses.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+    <script src="./js/firebase.js"></script>
+    <script src="./js/auth.js"></script>
     <script src="./js/product.js"></script>
 </body>
 </html>

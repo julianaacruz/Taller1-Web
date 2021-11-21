@@ -149,6 +149,10 @@ img {
           box-sizing: border-box;
 }
 
+.courses__cart {
+  margin: 3%;
+}
+
 .courses__banner {
   margin-bottom: 10px;
 }
@@ -188,6 +192,8 @@ img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-bottom: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .courses .products .product {
@@ -367,6 +373,12 @@ img {
   margin-bottom: 40px;
 }
 
+.product__cart {
+  border-bottom: 1px solid #5e5e5e;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
 .register {
   background-color: #F2F0EF;
   display: -webkit-box;
@@ -411,5 +423,56 @@ img {
   margin-bottom: 10px;
   font-size: 1.2em;
   margin-right: 10px;
+}
+
+.productsSection__total {
+  margin-left: 10%;
+}
+
+.productsSection__info {
+  margin: 0 3em 0 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sectionTotal__total {
+  font-weight: bolder;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  margin: 50px auto;
+}
+
+.form__title {
+  margin-bottom: 20px;
+  font-size: 29px;
+}
+
+.form__error {
+  color: #D23D29;
+}
+
+.form__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=styles2.css.map */

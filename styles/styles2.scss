@@ -152,6 +152,12 @@ img{
 }
 
 .courses{
+
+    &__cart{
+    margin: 3%;
+    }
+
+
     &__banner{
         margin-bottom: 10px;
     
@@ -182,6 +188,7 @@ img{
         overflow-x: hidden;
         box-sizing: border-box;
         margin-bottom: 20px;
+        flex-wrap: wrap;
     
         .product{
             display: block;
@@ -345,6 +352,16 @@ img{
         margin-top: 30px;
         margin-bottom: 40px;
     }
+
+    &__cart{
+
+    //background-color: #D23D29;
+    border-bottom: 1px solid #5e5e5e;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+
+       
+    }
 }
 
 
@@ -393,4 +410,60 @@ img{
         margin-right: 10px;
     }
 
+}
+
+
+.productsSection{
+    &__total{
+        margin-left: 10%;
+    }
+
+    &__info{
+        margin: 0 3em 0 4em;
+        display:flex;
+
+    }
+}
+
+.sectionTotal{
+
+&__total{
+    font-weight: bolder;
+    
+}
+}
+
+.form {
+    //background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    //border: 1px solid gray;
+   // border-radius: 5px;
+    //padding: 30px;
+    margin: 50px auto;
+
+
+
+ // margin-bottom: 30px;
+  
+    &__title {
+      margin-bottom: 20px;
+      font-size: 29px;
+    }
+    &__error{
+        color: #D23D29;
+
+    }
+  
+    &__label {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+  }
+  
+  .hidden{
+    display: none;
 }

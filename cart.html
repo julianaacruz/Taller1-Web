@@ -4,15 +4,156 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito</title>
+    <title>Cursos</title>
+    <link rel="stylesheet" href="./styles/styles2.css">
 </head>
 <body>
-    <ul class="products" id="cart">
+    <nav class="menu container">
+        <figure class="menu__figure">
+            <img class="menu__logo" src="./img/logo.png" alt="edX logo"> 
+        </figure>
+        <div class="menu__container" id="menu">
+            <ul class="menu__left">
+                <li class="menu__list-item">
+                    <a href="#">Cursos</a>
+                </li>
+                <li class="menu__list-item">
+                    <a href="#">Programas</a>
+                </li>
+                <li class="menu__list-item">
+                    <a href="#">Universidades</a>
+                </li>
+            </ul>
+    
+            <ul class="menu__right">
+                <li class="menu__list-item menu--light">
+                    <a href="#">edX para Negocios</a>
+                </li>
 
-    </ul>
-    <h3 class="total" id="total"></h3>
+            </ul>
+            <div id="close">x</div>
+            <div class="auth">
 
-    <script src="./js/utils.js"></script>
-    <script src="./js/cart.js"></script>
+                <div class="auth__without hidden">
+                  <a href="login.html"  class="link btn btn--grey">Iniciar sesión</a>
+                  <a href="register.html"  class="link btn btn--red">Registrarse</a>
+                </div>
+                <div class="auth__with hidden">
+                  <a style="color: #C2933A;" href="#" class="auth__profile link">
+                    <span></span>
+                  </a>
+                  <a class="showadmin hidden link" style="color: #6C0E23;" href="/admin.html">Administrador</a>
+                  <br>
+                  <a style="color: rgb(0, 0, 253);" href="#" class="auth__signout link" >
+                    Cerrar sesión
+                  </a>
+                  
+                </div>
+              </div>
+        </div>
+        <button class="menu__action" id="openMenu">
+            <img src="./img/menu.png" alt="menu">
+        </button>
+    </nav>
+
+
+<section class="courses__cart container">
+
+
+    <div class="courses__header container3">
+        <h1 class="courses__title">Carrito de compras</h1>
+
+
+    </div>
+
+    <div class="productsSection__cart container3" id="products">
+    </div>
+
+    <div class="productsSection__info">
+        <span style="width: 70%;">En el carrito puedes dejar temporalmente tu compra, en él aparecerá el precio más reciente de cada producto.
+        Los códigos de descuento no son acumulables, ni tampoco aplicables junto a otras promociones especiales salvo que
+        se indique lo contrario.</span>
+
+        <div class="productsSection__total"><p class="sectionTotal__total"> </p> 
+        <button class="btn-checkout btn btn--red"> Pagar</button>
+    </div>
+    </div>
+
+</section>
+
+<section class="footer container">
+    <figure class="footer__logo container2">
+        <img src="./img/logo__white.png" alt="edx logo">
+    </figure>
+    <div class="footer__menu container2">
+        <div class="footer__menu--options">
+            <div>
+                <p class="footer__title">
+                    edx
+                </p>
+                <ul class="footer__list">
+                    <li class="footer__body"><a href="#">Acerca de</a></li>
+                    <li class="footer__body"><a href="#">edX para Negocios</a></li>
+                    <li class="footer__body"><a href="#">Afiliados</a></li>
+                    <li class="footer__body"><a href="#">Carreras</a></li>
+                    <li class="footer__body"><a href="#">Noticias</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer__column2">
+                <p class="footer__title">
+                    Contacto
+                </p>
+                <ul class="footer__list">
+                    <li class="footer__body"><a href="#">Blog</a></li>
+                    <li class="footer__body"><a href="#">Contáctanos</a></li>
+                    <li class="footer__body"><a href="#">Centro de ayuda</a></li>
+                    <li class="footer__body"><a href="#">Kit de prensa</a></li>
+                    <li class="footer__body"><a href="#">Donar</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer__logos-column">
+                <ul class="footer__logos-list">
+                    <li class="footer__logos-img"><a href="#"><img src="./img/ig.png" alt="instagram"></a></li>
+                    <li class="footer__logos-img"><a href="#"><img src="./img/tw.png" alt="twitter"></a></li>
+                    <li class="footer__logos-img"><a href="#"><img src="./img/linkedin.png" alt="linkedin"></a></li>
+                    <li class="footer__logos-img"><a href="#"><img src="./img/fb.png" alt="facebook"></a></li>
+                </ul>
+    
+                <ul class="footer__download-list">
+                    <li class="footer__download-img"><img src="./img/appstore.png" alt="appstore"></li>
+                    <li class="footer__download-img"><img src="./img/googleplay.png" alt="googleplay"></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="newsletter">
+            <p class="newsletter__title">
+                Suscríbete a nuestro newsletter
+            </p>
+
+            <p class="footer__body">
+                No te pierdas de las novedades y promociones especiales que tendremos para ti
+            </p>
+
+            <form class="newsletter__form">
+                <input class="form__input" type="text" placeholder="Correo electrónico">
+                <input class="input__button" type="submit" value="Suscríbete">
+            </form>
+        </div>
+
+    </div>
+    <p class="footer__body footer__rights container2">© 2021 edX Inc. All rights reserved.</p>
+</section>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+<script src="./js/firebase.js"></script>
+<script src="./js/auth.js"></script>
+<script src="./js/cart.js"></script>
+
 </body>
 </html>
