@@ -143,82 +143,6 @@ function productTemplate (list) {
 
 
 
-
-
-
-
-
-
-
-
-//Agregar productos
-
-
-/*
-
-const productsTemplate = (item) => {
-    const product = document.createElement("a");
-    product.className = "product";
-    product.setAttribute("href", `./product.html?id=${item.id}`);
-
-    // Carrito
-    const isAdded = cart.some(productCart => productCart.id === item.id);
-
-    console.log(isAdded); //No esta funcionando el some? ****************
-
-    let buttonHtml;
-    if (isAdded) {
-        buttonHtml = `<button class="btn btn--cart" disabled>Añadido al carrito</button>`
-    } else {
-        buttonHtml = `<button class="btn btn--cart">Añadir al carrito</button>`;
-    }
-
-    // Añadir el HTML a product
-    product.innerHTML = `
-    <img src="${item.image}" alt="${item.name}" class="product__image">
-            <figure class="product__logo">
-                <img src="${item.logo}">
-            </figure>
-            
-            <div class="product__description">
-                <p class="product__name">${item.name}</p>
-                <p class="product__university">${item.university}</p>
-                <p class="product__price">${item.price}</p>
-                ${buttonHtml}
-            </div>
-    `;
-
-    productsSection.appendChild(product);
-
-
-    const productCartButton = product.querySelector(".btn--cart");
-
-    // Click botón del carrito:
-    productCartButton.addEventListener("click", e => {
-        e.preventDefault();
-
-        const productAdded = {
-            id: item.id,
-            name: item.name,
-            image: item.image,
-            price: item.price
-        };
-
-        cart.push(productAdded);
-
-        // Deshabilitar botón carrito
-        productCartButton.setAttribute("disabled", true);
-        productCartButton.innerText="Añadido al carrito";
-
-    });
-
-};
-
-
-*/
-
-
-
 // agregar nuevo producto
 const form = document.querySelector('.form');
 form.addEventListener('submit', function (event) {
@@ -235,7 +159,10 @@ form.addEventListener('submit', function (event) {
    level: form.level.value,
    type: form.type.value,
    about: form.About.value,
-   instructor: form.instructor.value, 
+   instructor: form.instructor.value,
+   instructordescription: form.instructordescription.value, 
+   profilepic: form.instructorpp.value, 
+
   };
 
 //  loader.classList.add("loader--show");
