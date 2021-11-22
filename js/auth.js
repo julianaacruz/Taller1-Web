@@ -10,7 +10,6 @@ const authSignout = auth.querySelector('.auth__signout');
 var userInfo;
 
 firebase.auth().onAuthStateChanged(function(user) {
-    console.log(user);
 
     if(user) {
         // si el usuario existe quiere decir que inició sesión, se registró o ya tenía sesión iniciada
@@ -25,7 +24,6 @@ firebase.auth().onAuthStateChanged(function(user) {
             const data = doc.data();
             userInfo = data;
             authProfileSpan.innerText = data.firstname;
-            console.log(user.uid)
     
             if(data.admin) {
               const showAdmin = document.querySelectorAll('.showadmin');

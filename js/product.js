@@ -29,13 +29,9 @@ productImage.setAttribute("src", product.image);
 
 window.addEventListener('load', function () {
 
-    console.log(location.search);
-
     const url = window.location.search;
     const searchParams = new URLSearchParams(url);
     const productId = searchParams.get("id");
-
-    console.log(productId);
 
     var newProduct = {
 
@@ -56,9 +52,7 @@ window.addEventListener('load', function () {
 
     }
 
-    
 
-    console.log(userId)
 
     if(userId!=null){
 
@@ -110,8 +104,6 @@ window.addEventListener('load', function () {
        pricep= product.list;
 */
     })
-  
-    console.log("");
 
     const btn = document.querySelector('.product__addToCart');
 
