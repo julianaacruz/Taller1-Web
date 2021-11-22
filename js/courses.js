@@ -49,8 +49,6 @@ function productTemplate (list) {
 
     console.log(isAdded); //No esta funcionando el some? ****************
 
-
-
     // Añadir el HTML a product
     product.innerHTML = `
     <a href="./product.html?id=${item.id}" style="text-decoration: none;">
