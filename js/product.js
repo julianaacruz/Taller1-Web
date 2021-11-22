@@ -84,16 +84,24 @@ window.addEventListener('load', function () {
         // Handle any errors
       });
 */
-      document.getElementById("productPrice").innerText = product.price;
+      document.getElementById("productPrice").innerText = formatCurrency(product.price);
       document.getElementById("productUniversity").innerText = product.university;
       document.getElementById("productDescription").innerText = product.description;
       document.getElementById("productImage").setAttribute("src", product.image);
+      document.getElementById("productUnilogo").setAttribute("src", product.logo);
+      document.getElementById("instructorImg").setAttribute("src", product.profileimg);
+      document.getElementById("instructorName").innerText = product.instructor;
+      document.getElementById("instructorDescription").innerText = product.instructordescription;
+      document.getElementById("about").innerText = product.about;
 
 
-       newProduct = {
+
+
+      newProduct = {
         title: product.name,
         img: product.image,
         price: product.price,
+        university: product.university,
         //details :product.details,
         //storageImg: product.storageImg
       };
@@ -136,6 +144,9 @@ window.addEventListener('load', function () {
       carritoUser.add(newProduct).then(function(docRef) {
           alert("Producto agregado al carrito")
           console.log("Document written with ID: ", docRef.id);
+          // Deshabilitar botón carrito
+          btn.setAttribute("disabled", true);
+          btn.innerText="Añadido al carrito";
       })
       .catch(function(error) {
           console.error("Error adding document: ", error);

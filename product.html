@@ -15,7 +15,7 @@
         <div class="menu__container" id="menu">
             <ul class="menu__left">
                 <li class="menu__list-item">
-                    <a href="#">Cursos</a>
+                    <a href="courses.html">Cursos</a>
                 </li>
                 <li class="menu__list-item">
                     <a href="#">Programas</a>
@@ -24,38 +24,42 @@
                     <a href="#">Universidades</a>
                 </li>
             </ul>
-    
-            <ul class="menu__right">
-                <li class="menu__list-item menu--light">
-                    <a href="#">edX para Negocios</a>
-                </li>
-                <li>
-                    <a href="cart.html">
-                    <svg width="34" height="28" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23.9448 24.1505C23 24.1505 22.2338 24.9164 22.2338 25.8616C22.2338 26.8065 23 27.5727 23.9448 27.5727C24.8897 27.5727 25.6559 26.8065 25.6559 25.8616C25.6559 24.916 24.8897 24.1505 23.9448 24.1505ZM10.6769 24.1505C9.73197 24.1505 8.96576 24.9164 8.96576 25.8616C8.96576 26.8065 9.73197 27.5727 10.6769 27.5727C11.6217 27.5727 12.3879 26.8065 12.3879 25.8616C12.3879 24.916 11.6217 24.1505 10.6769 24.1505ZM29.1801 18.2366L33.9582 4.2327H8.69127L7.30871 0H0L0.72046 2.52161H5.47946L10.3663 17.483L8.59761 23.2049H27.4448L28.1653 20.6833H11.9503L12.8083 18.2366H29.1801Z" fill="#09262B"/>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-            <div id="close">x</div>
-            <div class="auth">
+            <div class="menu__login">
+                <ul class="menu__right">
+                    <li class=" menu--light">
+                        <a href="#">edX para Negocios</a>
+                    </li>
+                    <li>
+                        <a class="menu__cart" href="cart.html">
+                        <svg width="34" height="28" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.9448 24.1505C23 24.1505 22.2338 24.9164 22.2338 25.8616C22.2338 26.8065 23 27.5727 23.9448 27.5727C24.8897 27.5727 25.6559 26.8065 25.6559 25.8616C25.6559 24.916 24.8897 24.1505 23.9448 24.1505ZM10.6769 24.1505C9.73197 24.1505 8.96576 24.9164 8.96576 25.8616C8.96576 26.8065 9.73197 27.5727 10.6769 27.5727C11.6217 27.5727 12.3879 26.8065 12.3879 25.8616C12.3879 24.916 11.6217 24.1505 10.6769 24.1505ZM29.1801 18.2366L33.9582 4.2327H8.69127L7.30871 0H0L0.72046 2.52161H5.47946L10.3663 17.483L8.59761 23.2049H27.4448L28.1653 20.6833H11.9503L12.8083 18.2366H29.1801Z" fill="#09262B"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
 
-                <div class="auth__without hidden">
-                  <a href="login.html"  class="link btn btn--grey">Iniciar sesión</a>
-                  <a href="register.html"  class="link btn btn--red">Registrarse</a>
+                <div id="close">x</div>
+                <div class="auth">
+    
+                    <div class="auth__without hidden menu__right">
+                      <a href="login.html"  class="link btn btn--grey">Iniciar sesión</a>
+                      <a href="register.html"  class="link btn btn--red">Registrarse</a>
+                    </div>
+                    <div class="auth__with hidden">
+                      <a" href="#" class="auth__profile link">
+                        <span></span>
+                      </a>
+                      <a class="showadmin hidden link" style="color: #6C0E23;" href="/admin.html">Administrador</a>
+                      
+                      <a href="#" class="auth__signout link btn" >
+                        Cerrar sesión
+                      </a>
+                      
+                    </div>
                 </div>
-                <div class="auth__with hidden">
-                  <a style="color: #C2933A;" href="#" class="auth__profile link">
-                    <span></span>
-                  </a>
-                  <a class="showadmin hidden link" style="color: #6C0E23;" href="/admin.html">Administrador</a>
-                  <br>
-                  <a style="color: rgb(0, 0, 253);" href="#" class="auth__signout link" >
-                    Cerrar sesión
-                  </a>
-                  
-                </div>
-              </div>
+            </div>
+            
+
         </div>
         <button class="menu__action" id="openMenu">
             <img src="./img/menu.png" alt="menu">
@@ -68,18 +72,53 @@
             <img src="" alt="" class="product__mainImage" id="productImage">
         </div>
 
-
         <div class="product__description container2">
 
-            <h1 class="product__name" id="productName">Cargando....</h1>
-            <p class="product__university" id="productUniversity"></p>
-            <p class="product__paragraph" id="productDescription"></p> 
+            <div class="product__leftside">
+                <h1 class="product__name" id="productName">Cargando....</h1>
+                <p class="product__university" id="productUniversity"></p>
+                <p class="product__paragraph" id="productDescription"></p> 
+    
+                <h3 class="product__price" id="productPrice"></h3>
+    
+                <button class="product__addToCart btn btn--red">Añadir al carrito</button>
+                <hr size="1" width="100%" color="#C4C4C4"> 
 
-            <h3 class="product__price" id="productPrice"></h3>
+                <div class="instructor">
+                    <img src="" alt="" class="instructor__image" id="instructorImg">
+                    <div class="instructor__info">
+                        <h2>Instructor</h2>
+                        <p class="instructor__name" id="instructorName"></p> 
+                        <p class="instructor__description" id="instructorDescription"></p>     
+                    </div>
+                </div>
 
-            <button class="product__addToCart btn btn--red">Añadir al carrito</button>
+                <div>
+                    <h2>Sobre este curso</h2>
+                    <p class="product__about" id="about"></p> 
+                </div>
+            </div>
 
+            <div class="product__aside">
 
+                <figure>
+                    <img src="" alt="" class="product__unilogo" id="productUnilogo">
+                </figure>
+                <p class="product__aside__boldtype">Hay una sesión disponible:</p>
+                <p class="product__aside__regulartype">¡354,205 ya están inscritos! Una vez finalizada la sesión del curso, se archivará.</p>
+                <p class="product__aside__boldtype product__aside__boldtype--single characteristics__item">Empieza el 21 de Noviembre</p>
+
+                <ul class="product__list">
+                    <li class="product__item">Duración 8 semanas: 2 a 4 horas a la semana</li>
+                    <li class="product__item">Ritmo propio: Progrese a tu propio ritmo</li>
+                    <li class="product__item">Nivel: Intermedio</li>
+                    <li class="product__item">Idioma: Inglés</li>
+                    <li class="product__item">Prerrequisitos: Ninguno</li>
+                </ul>
+                
+
+            </div>
+            
         </div>
 
 

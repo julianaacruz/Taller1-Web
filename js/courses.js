@@ -67,7 +67,7 @@ function productTemplate (list) {
             <div class="product__description">
                 <p class="product__name">${item.name}</p>
                 <p class="product__university">${item.university}</p>
-                <p class="product__price">${item.price}</p>
+                <p class="product__price">${formatCurrency(item.price)}</p>
                 </a>
                 <button class="product__delete hidden showadmin">Eliminar</button>
                 <button class="product__edit hidden showadmin">Editar</button>

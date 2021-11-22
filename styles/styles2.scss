@@ -84,6 +84,11 @@ img{
             justify-content: end;
             
         }
+
+        .menu__login{
+            justify-content: space-between;
+            width: 300px;
+        }
     
     }
 
@@ -152,6 +157,7 @@ img{
 }
 
 .courses{
+
 
     &__cart{
     margin: 3%;
@@ -348,9 +354,65 @@ img{
             object-fit: cover;
         }
     }
+
+    &__unilogo{
+        width: 280px;
+        height: 150px;
+        padding: 20px;
+        background: #FFFFFF;
+        border: 1px solid $green-50;
+        position: relative;
+        top: -70px;
+        left: 70px;
+        
+
+    }
     &__description{
-        margin-top: 30px;
-        margin-bottom: 40px;
+
+        display: flex;
+    }
+
+    &__leftside{
+        padding-top: 50px;
+        padding-bottom: 40px;
+        padding-right: 80px;
+        width: 80%;
+
+    }
+
+    &__price{
+        margin-top: 20px;
+        font-size: $medium;
+    }
+
+    &__addToCart{
+        margin-bottom: 40px !important;
+    }
+
+    &__aside{
+        padding: 0 70px 50px 70px;
+        background-color: $cream;
+
+        &__boldtype{
+            font-weight: 700;
+
+            &--single{
+                margin-top: 20px;
+                
+            }
+        }
+
+        .product__list{
+            list-style: none;
+            margin-top: 70px;
+
+            .product__item{
+                color: $green-50;
+                margin-top: 0.8em;
+                font-size: $medium;
+                font-weight: 700;
+            }
+        }
     }
 
     &__cart{
@@ -359,8 +421,44 @@ img{
     border-bottom: 1px solid #5e5e5e;
     margin-bottom: 20px;
     padding-bottom: 20px;
-
        
+    }
+
+    &__university{
+        color:$red;
+        font-size: $medium;
+        font-weight: 700;
+        margin: 0.5em 0 1em 0;
+        font-family: $mono;
+
+
+    }
+
+    .instructor{
+        background-color: $cream;
+        margin-top: 20px;
+        display: flex;
+        box-sizing: border-box;
+        padding: 20px;
+        margin-bottom: 50px;
+
+        &__image{
+            border-radius: 200px;
+            height: 100px;
+            width: 100px;
+        }
+        &__info{
+            margin-left: 20px;
+
+            .instructor__name{
+                margin-top: 15px;
+            }
+        }
+    }
+
+    &__about{
+        margin-top: 20px;
+        margin-bottom: 30px;
     }
 }
 
@@ -432,6 +530,14 @@ img{
 
 }
 
+.btn{
+    margin: 1em 0;
+    &:disabled{
+        background-color: $green-50;
+    }
+
+
+}
 
 .productsSection{
     &__total{

@@ -87,6 +87,13 @@ img {
           justify-content: end;
 }
 
+.menu__container .menu__login {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 300px;
+}
+
 .menu #close {
   display: none;
 }
@@ -368,15 +375,107 @@ img {
      object-fit: cover;
 }
 
+.product__unilogo {
+  width: 280px;
+  height: 150px;
+  padding: 20px;
+  background: #FFFFFF;
+  border: 1px solid rgba(9, 38, 43, 0.5);
+  position: relative;
+  top: -70px;
+  left: 70px;
+}
+
 .product__description {
-  margin-top: 30px;
-  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product__leftside {
+  padding-top: 50px;
+  padding-bottom: 40px;
+  padding-right: 80px;
+  width: 80%;
+}
+
+.product__price {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+.product__addToCart {
+  margin-bottom: 40px !important;
+}
+
+.product__aside {
+  padding: 0 70px 50px 70px;
+  background-color: #F2F0EF;
+}
+
+.product__aside__boldtype {
+  font-weight: 700;
+}
+
+.product__aside__boldtype--single {
+  margin-top: 20px;
+}
+
+.product__aside .product__list {
+  list-style: none;
+  margin-top: 70px;
+}
+
+.product__aside .product__list .product__item {
+  color: rgba(9, 38, 43, 0.5);
+  margin-top: 0.8em;
+  font-size: 1.2em;
+  font-weight: 700;
 }
 
 .product__cart {
   border-bottom: 1px solid #5e5e5e;
   margin-bottom: 20px;
   padding-bottom: 20px;
+}
+
+.product__university {
+  color: #D23D29;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 0.5em 0 1em 0;
+  font-family: "Roboto Mono", monospace;
+}
+
+.product .instructor {
+  background-color: #F2F0EF;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.product .instructor__image {
+  border-radius: 200px;
+  height: 100px;
+  width: 100px;
+}
+
+.product .instructor__info {
+  margin-left: 20px;
+}
+
+.product .instructor__info .instructor__name {
+  margin-top: 15px;
+}
+
+.product__about {
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .register {
@@ -442,6 +541,14 @@ img {
 .register__copy {
   color: rgba(9, 38, 43, 0.5);
   margin-top: 2em;
+}
+
+.btn {
+  margin: 1em 0;
+}
+
+.btn:disabled {
+  background-color: rgba(9, 38, 43, 0.5);
 }
 
 .productsSection__total {

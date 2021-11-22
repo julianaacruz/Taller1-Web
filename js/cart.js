@@ -32,8 +32,8 @@ let selectedItem = null;
       
       <div class="product__info ">
         <h3 class="product__title">${elem.title}</h3>
-        <p class="product__price">Precio $ ${elem.price}</p>
-        <button class="product__delete ">Eliminar</button>
+        <p class="product__price">Precio ${formatCurrency(elem.price)}</p>
+        <button class="product__delete btn">Eliminar</button>
         </div>
         
       </div>
@@ -75,7 +75,7 @@ let selectedItem = null;
       totalPrice += parseInt(elem.price);
 
       console.log(totalPrice)
-      total.innerText = `Total $ ${totalPrice}`;
+      total.innerText = `Total $ ${formatCurrency(totalPrice)}`;
 
     });
    
