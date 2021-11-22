@@ -8,24 +8,26 @@
     <link rel="stylesheet" href="./styles/styles2.css">
 </head>
 <body class="register container">
-    <div class="register__square">
-        <figure class="register__figure">
-            <img class="register__logo" src="./img/logo.png" alt="edX logo"> 
-        </figure>
-        <h1 class="register__title">Comienza a aprender con edX</h1>
-    </div>
+  <div class="register__square">
+    <figure class="register__figure">
+        <img class="register__img" src="./img/login__img.png" alt="Tu futuro comienza ahora"> 
+    </figure>
+</div>
     <aside class="register__side">
         <a href="Register.html" class="register__subtitle">Registrarse</a>
-        <a href="login.html" class="register__subtitle">Iniciar sesión</a>
+        <a href="login.html" class="register__subtitle register__subtitle--picked">Iniciar sesión</a>
 
         <form class="register__form login" action="" id="register">
-            <h2>Iniciar sesión</h2>
+          <hr size="1" width="100%" color="grey"> 
+            <h2 class="register__title">Iniciar sesión</h2>
+
             <input class="form__input register__input" type="text" name="email" placeholder="Correo electrónico">
             <input class="form__input register__input" type="password" name="password" placeholder="Contraseña">
             <p class="form__error hidden">
                 Información inválida, intente de nuevo.
               </p>
             <input class="input__button" type="submit" value="Ingresar">
+            <p class="register__copy">  © Todos los derechos reservados 2021 · http://edx.org/</p>
         </form>
         </aside>
     <!-- 

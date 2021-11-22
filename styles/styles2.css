@@ -386,31 +386,36 @@ img {
   display: flex;
 }
 
+.register .login__menu {
+  margin: 0;
+}
+
 .register__square {
   background-color: #09262B;
   width: 50%;
   height: 820px;
-  padding: 10px 50px;
-  display: block;
-  -ms-grid-column-align: left;
-      justify-self: left;
+}
+
+.register__title {
+  color: #09262B;
+  font-size: 1.7em;
+  margin-bottom: 1em;
+  margin-top: 1.5em;
+}
+
+.register__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 
 .register__side {
   padding: 50px;
 }
 
-.register__logo {
-  height: 50px;
-}
-
-.register__title {
-  font-size: 3.5em;
-  color: #FFFFFF;
-}
-
 .register__form {
-  margin-top: 30px;
+  margin-top: 10px;
+  width: 500px;
 }
 
 .register__form .register__input {
@@ -418,11 +423,25 @@ img {
   margin-bottom: 10px;
 }
 
+.register__input {
+  width: 100%;
+}
+
 .register__subtitle {
-  color: #09262B;
+  color: rgba(9, 38, 43, 0.5);
   margin-bottom: 10px;
   font-size: 1.2em;
   margin-right: 10px;
+  text-decoration: none;
+}
+
+.register__subtitle--picked {
+  color: #09262B;
+}
+
+.register__copy {
+  color: rgba(9, 38, 43, 0.5);
+  margin-top: 2em;
 }
 
 .productsSection__total {
@@ -448,7 +467,7 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 400px;
+  width: 500px;
   margin: 50px auto;
 }
 

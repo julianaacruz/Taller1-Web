@@ -369,45 +369,65 @@ img{
     background-color: $cream;
     display: flex;
 
+    .login__menu{
+        margin: 0;
+
+
+    }
+
     &__square{
         background-color: $green;
         width: 50%;
         height: 820px;
-        padding: 10px 50px;
-        display: block;
-        justify-self: left;
+
+    }
+
+    &__title{
+        color: $green;
+        font-size: $subtitle;
+        margin-bottom: 1em;
+        margin-top: 1.5em;
+    }
+
+    &__img{
+        object-fit: cover;
+        width: 100%;
     }
 
     &__side{
         padding: 50px;
     }
 
-    &__logo{
-        height: 50px;
-
-    }
-
-    &__title{
-        font-size: $title;
-        color:$white;
- 
-        
-    }
 
     &__form{
-        margin-top: 30px;
+        margin-top: 10px;
+        width: 500px;
         .register__input{
             display: block;
             margin-bottom: 10px;
         }
     }
+
+    &__input{
+        width: 100%
+    }
     
 
     &__subtitle{
-        color: $green;
+        color: $green-50;
         margin-bottom: 10px;
         font-size: $medium;
         margin-right: 10px;
+        text-decoration: none;
+
+        &--picked{
+            color: $green;
+        }
+    }
+
+    &__copy{
+        color: $green-50;
+        margin-top: 2em;
     }
 
 }
@@ -437,7 +457,7 @@ img{
     //background-color: white;
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 500px;
     //border: 1px solid gray;
    // border-radius: 5px;
     //padding: 30px;
