@@ -49,12 +49,7 @@ function productTemplate (list) {
 
     console.log(isAdded); //No esta funcionando el some? ****************
 
-    let buttonHtml;
-    if (isAdded) {
-        buttonHtml = `<button class="btn btn--cart" disabled>Añadido al carrito</button>`
-    } else {
-        buttonHtml = `<button class="btn btn--cart">Añadir al carrito</button>`;
-    }
+
 
     // Añadir el HTML a product
     product.innerHTML = `
@@ -69,10 +64,13 @@ function productTemplate (list) {
                 <p class="product__university">${item.university}</p>
                 <p class="product__price">${formatCurrency(item.price)}</p>
                 </a>
-                <button class="product__delete hidden showadmin">Eliminar</button>
-                <button class="product__edit hidden showadmin">Editar</button>
+                
             </div>
-           
+
+            <div class="admin__buttons">
+            <button class="product__delete btn btn--red hidden showadmin">Eliminar</button>
+            <button class="product__edit btn hidden showadmin">Editar</button>
+            </div>
           
     `;
 

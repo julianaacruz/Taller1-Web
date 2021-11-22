@@ -100,8 +100,9 @@ var userInfo = db.collection('users').doc(userId);
       
       
 
-        <h3 class="">${elem.title}</h3>
-        <p class="">$ ${elem.price}</p>
+        <h3 class="checkout__product-name">${elem.title}</h3>
+        <p class="checkout__product-price">${formatCurrency(elem.price)}</p>
+        <hr size="1" width="50%" color="#C4C4C4"> 
         
 
       `;
@@ -111,7 +112,7 @@ var userInfo = db.collection('users').doc(userId);
       totalPrice += parseInt(elem.price);
 
       console.log(totalPrice)
-      total.innerText = `Total $ ${totalPrice}`;
+      total.innerText = `Total: ${formatCurrency(totalPrice)}`;
 
 
 

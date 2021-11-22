@@ -24,32 +24,43 @@
                     <a href="#">Universidades</a>
                 </li>
             </ul>
+            <div class="menu__side">
+                <ul class="menu__right">
+                    <li class="menu__list-item menu--light">
+                        <a href="#">edX para Negocios</a>
+                    </li>
+                    <li>
+                        <a href="cart.html">
+                        <svg width="34" height="28" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.9448 24.1505C23 24.1505 22.2338 24.9164 22.2338 25.8616C22.2338 26.8065 23 27.5727 23.9448 27.5727C24.8897 27.5727 25.6559 26.8065 25.6559 25.8616C25.6559 24.916 24.8897 24.1505 23.9448 24.1505ZM10.6769 24.1505C9.73197 24.1505 8.96576 24.9164 8.96576 25.8616C8.96576 26.8065 9.73197 27.5727 10.6769 27.5727C11.6217 27.5727 12.3879 26.8065 12.3879 25.8616C12.3879 24.916 11.6217 24.1505 10.6769 24.1505ZM29.1801 18.2366L33.9582 4.2327H8.69127L7.30871 0H0L0.72046 2.52161H5.47946L10.3663 17.483L8.59761 23.2049H27.4448L28.1653 20.6833H11.9503L12.8083 18.2366H29.1801Z" fill="#09262B"/>
+                            </svg>
+                        </a>
+                    </li>
     
-            <ul class="menu__right">
-                <li class="menu__list-item menu--light">
-                    <a href="#">edX para Negocios</a>
-                </li>
+                </ul>
 
-            </ul>
+                <div class="auth">
+
+                    <div class="auth__without hidden">
+                      <a href="login.html"  class="link btn btn--grey">Iniciar sesión</a>
+                      <a href="register.html"  class="link btn btn--red">Registrarse</a>
+                    </div>
+                    <div class="auth__with hidden">
+                        <a href="#" class="auth__profile link">
+                          <span></span>
+                        </a>
+                        <a class="showadmin hidden link" style="color: #6C0E23;" href="/admin.html">Administrador</a>
+                        
+                        <a href="#" class="auth__signout btn link" >
+                          Cerrar sesión
+                        </a>
+                        
+                      </div>
+                </div>
+            </div>
+            
             <div id="close">x</div>
-            <div class="auth">
 
-                <div class="auth__without hidden">
-                  <a href="login.html"  class="link btn btn--grey">Iniciar sesión</a>
-                  <a href="register.html"  class="link btn btn--red">Registrarse</a>
-                </div>
-                <div class="auth__with hidden">
-                  <a style="color: #C2933A;" href="#" class="auth__profile link">
-                    <span></span>
-                  </a>
-                  <a class="showadmin hidden link" style="color: #6C0E23;" href="/admin.html">Administrador</a>
-                  <br>
-                  <a style="color: rgb(0, 0, 253);" href="#" class="auth__signout link" >
-                    Cerrar sesión
-                  </a>
-                  
-                </div>
-              </div>
         </div>
         <button class="menu__action" id="openMenu">
             <img src="./img/menu.png" alt="menu">
@@ -57,28 +68,34 @@
     </nav>
 
 
-<section class="courses__cart container">
+<section class="checkout container2">
 
 
-    <div class="courses__header container3">
-        <h1 class="courses__title">Checkout</h1>
+    <div class="checkout__header ">
+        <h1 class="checkout__title">Checkout</h1>
 
 
     </div>
     <div>
-        <h3>Datos de pago</h3>
-        <p class="name"></p>
-        <p class="direction"></p>
-        <p class="credit"></p>
+        <h3 class="checkout__subtitle">Datos de pago</h3>
+        <hr size="1" width="100%" color="#C4C4C4"> 
+        <div class="checkout__data">
+            <p class="name"></p>
+            <p class="direction"></p>
+            <p class="credit"></p>
+        </div>
+        
 
 
     </div>
+    <h3 class="checkout__subtitle">Resumen de compra</h3>
+    <hr size="1" width="100%" color="#C4C4C4"> 
 
-    <div class="productsSection__cart container3" id="products">
+    <div class="productsSection__cart" id="products">
     </div>
 
     <div>
-        <div><h1 class="sectionTotal__total">Cargando... </h1> </div>
+        <div><h3 class="sectionTotal__total">Cargando... </h3> </div>
         <button class="btn-pay btn btn--red"> Comprar</button>
     </div>
 

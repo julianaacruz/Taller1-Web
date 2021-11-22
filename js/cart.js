@@ -28,7 +28,7 @@ let selectedItem = null;
     
       newProduct.innerHTML = `
       <div class="product__cart ">
-      <img class="product__img"  style="width:400px;" src="${elem.img}" alt="">
+      <img class="product__img" src="${elem.img}" alt="">
       
       <div class="product__info ">
         <h3 class="product__title">${elem.title}</h3>

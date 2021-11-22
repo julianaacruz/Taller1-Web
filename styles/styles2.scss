@@ -4,12 +4,15 @@
 $green: #09262B;
 $green-50: rgba(9, 38, 43, 0.5);
 $green-30: rgba(9, 38, 43, 0.3);
+$green-70: rgba(9, 38, 43, 0.7);
+
 $cream: #F2F0EF;
 $white: #FFFFFF;
 $red: #D23D29;
 $small: 1em;
 $medium: 1.2em;
 $subtitle: 1.7em;
+$subtitle2: 2em;
 $title: 3.5em;
 $mono:'Roboto Mono', monospace;
 $sans: 'Open Sans', sans-serif;
@@ -67,8 +70,8 @@ img{
     
     &__container{
         display: flex;
-        justify-content: space-between;
         width: 100%;
+        justify-content: space-between;
 
         .menu__left{
             display: flex;
@@ -81,15 +84,32 @@ img{
             display: flex;
             align-items: center;
             list-style: none;
-            justify-content: end;
+            margin-right: 30px;
             
         }
 
-        .menu__login{
-            justify-content: space-between;
-            width: 300px;
+        .menu__side{
+            width: 600px;
+            display: flex;
         }
+
     
+    }
+
+    .auth{
+        justify-content: end;
+        align-items: center;
+        margin-top: 5px;
+
+        &__profile {
+            color: $green;
+        }
+
+        &__signout{
+            background-color: $red;
+            color: white;
+            margin-left: 10px;
+         }
     }
 
     #close{
@@ -141,8 +161,14 @@ img{
 .form__input{
     padding: 1em;
     width: 22em;
-    border: 0em;
+    border: 1em;
+    border-color: $green-50;
     box-sizing: border-box;
+
+    &--whitebg{
+        background-color: $cream;
+        width: 100%;
+    }
 
 }
 
@@ -157,11 +183,6 @@ img{
 }
 
 .courses{
-
-
-    &__cart{
-    margin: 3%;
-    }
 
 
     &__banner{
@@ -592,4 +613,102 @@ img{
   
   .hidden{
     display: none;
+}
+
+.cart{
+
+        margin-top: 80px;
+        margin-bottom: 40px;
+        min-height: 300px;
+    
+    &__header{
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    &__title{
+        margin-left: 20px;
+    }
+
+    &__message{
+        width: 60%;
+        color: $green-50;
+    }
+
+    .product__cart{
+        display: flex;
+    }
+
+    .product__img{
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+    }
+    .product__info{
+        margin-left: 30px;
+    }
+}
+
+.checkout{
+    margin-top: 70px;
+    margin-right: 70px;
+    &__title{
+        color:$green;
+        font-size: $subtitle2;
+        font-weight: 700;
+        font-family: $mono;
+    }
+    &__subtitle{
+        color: $green;
+        margin: 15px 0 15px 0;
+    }
+
+    &__data{
+        padding-top: 20px;
+        color: $green-70;
+        padding-bottom: 40px;
+    }
+
+    &__product-price{
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+
+    &__product-name{
+        margin-top: 15px;
+        font-weight: 400;
+    }
+
+    .productsSection__cart{
+        color: $green;
+        padding-bottom: 20px;
+        
+    }
+
+    .sectionTotal__total{
+        color: $red;
+        margin-bottom: 10px;
+    }
+
+    .btn-pay{
+        margin-bottom: 50px;
+    }
+
+}
+
+.admin{
+    &__buttons{
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    &__form{
+        justify-self: left;
+        width: 50%;
+        padding: 30px;
+        border-color: $green-70;
+        border-radius: 20px;
+        display: block;
+        
+    }
 }

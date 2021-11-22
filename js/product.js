@@ -142,11 +142,12 @@ window.addEventListener('load', function () {
         alert("Debes registrarte e ingresar para poder agregar productos al carrito")
       }  
       carritoUser.add(newProduct).then(function(docRef) {
-          alert("Producto agregado al carrito")
+          //alert("Producto agregado al carrito")
           console.log("Document written with ID: ", docRef.id);
           // Deshabilitar botón carrito
           btn.setAttribute("disabled", true);
           btn.innerText="Añadido al carrito";
+
       })
       .catch(function(error) {
           console.error("Error adding document: ", error);
