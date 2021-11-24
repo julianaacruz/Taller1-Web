@@ -281,6 +281,19 @@
     .footer__logos-column{
         margin-top: 3em;
     }
+
+    .filters{
+        display: flex;
+        overflow-x: hidden;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+
+    }
+
+    .filters__order{
+        margin-top: 10px;    
+    }
 }
 
 
