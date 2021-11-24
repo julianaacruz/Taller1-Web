@@ -36,10 +36,10 @@ window.addEventListener('load', function () {
     var newProduct = {
 
     };
-    
+
     // referencia a la base de datos
     const db = firebase.firestore();
-    
+
     // referencia a la coleción productos
     const productosRef = db.collection('products');
 
@@ -47,106 +47,106 @@ window.addEventListener('load', function () {
 
     var userData = JSON.parse(localStorage.getItem("userId"));
 
-    if(userData!=null){
-      var userId = userData.id;
+    if (userData != null) {
+        var userId = userData.id;
 
     }
 
 
 
-    if(userId!=null){
+    if (userId != null) {
 
-      var carritoUser = db.collection('users').doc(userId).collection('carrito');
+        var carritoUser = db.collection('users').doc(userId).collection('carrito');
     }
 
-  //  var storageRef = firebase.storage().ref();
-  
+    //  var storageRef = firebase.storage().ref();
+
     //referencia al producto con el uid específico
     productosRef.doc(productId)
-    .get() // traer info de ese producto
-    .then(function (snapshot) {
-  
-      const product = snapshot.data();
-  
-      const productName = document.getElementById("productName");
-      productName.innerText = product.name;
-/*
-      storageRef.child(product.storageImg).getDownloadURL().then(function(url) {
-        // Or inserted into an <img> element:
-        document.querySelector('.details__img').setAttribute('src', url);
-      }).catch(function(error) {
-        // Handle any errors
-      });
-*/
-      document.getElementById("productPrice").innerText = formatCurrency(product.price);
-      document.getElementById("productUniversity").innerText = product.university;
-      document.getElementById("productDescription").innerText = product.description;
-      document.getElementById("productImage").setAttribute("src", product.image);
-      document.getElementById("productUnilogo").setAttribute("src", product.logo);
-      document.getElementById("instructorImg").setAttribute("src", product.profileimg);
-      document.getElementById("instructorName").innerText = product.instructor;
-      document.getElementById("instructorDescription").innerText = product.instructordescription;
-      document.getElementById("about").innerText = product.about;
+        .get() // traer info de ese producto
+        .then(function (snapshot) {
+
+            const product = snapshot.data();
+
+            const productName = document.getElementById("productName");
+            productName.innerText = product.name;
+            /*
+                  storageRef.child(product.storageImg).getDownloadURL().then(function(url) {
+                    // Or inserted into an <img> element:
+                    document.querySelector('.details__img').setAttribute('src', url);
+                  }).catch(function(error) {
+                    // Handle any errors
+                  });
+            */
+            document.getElementById("productPrice").innerText = formatCurrency(product.price);
+            document.getElementById("productUniversity").innerText = product.university;
+            document.getElementById("productDescription").innerText = product.description;
+            document.getElementById("productImage").setAttribute("src", product.image);
+            document.getElementById("productUnilogo").setAttribute("src", product.logo);
+            document.getElementById("instructorImg").setAttribute("src", product.profileimg);
+            document.getElementById("instructorName").innerText = product.instructor;
+            document.getElementById("instructorDescription").innerText = product.instructordescription;
+            document.getElementById("about").innerText = product.about;
 
 
 
 
-      newProduct = {
-        title: product.name,
-        img: product.image,
-        price: product.price,
-        university: product.university,
-        //details :product.details,
-        //storageImg: product.storageImg
-      };
-  
-     /* titlep = product.title;
-       pricep= product.list;
-*/
-    })
+            newProduct = {
+                title: product.name,
+                img: product.image,
+                price: product.price,
+                university: product.university,
+                //details :product.details,
+                //storageImg: product.storageImg
+            };
+
+            /* titlep = product.title;
+              pricep= product.list;
+       */
+        })
 
     const btn = document.querySelector('.product__addToCart');
 
     productosRef.doc(productId)
-      .get() // traer info de ese producto
-      .then(function (snapshot) {
-    
-        const product = snapshot.data();
+        .get() // traer info de ese producto
+        .then(function (snapshot) {
 
-        //console.log(newProduct)
+            const product = snapshot.data();
+
+            //console.log(newProduct)
 
 
-    /*
-        const title = document.querySelector('h1');
-        title.innerText = product.title;
-  
-        storageRef.child(product.storageImg).getDownloadURL().then(function(url) {
-          // Or inserted into an <img> element:
-          document.querySelector('img').setAttribute('src', url);
-          */
+            /*
+                const title = document.querySelector('h1');
+                title.innerText = product.title;
+          
+                storageRef.child(product.storageImg).getDownloadURL().then(function(url) {
+                  // Or inserted into an <img> element:
+                  document.querySelector('img').setAttribute('src', url);
+                  */
 
-        }).catch(function(error) {
-          // Handle any errors
+        }).catch(function (error) {
+            // Handle any errors
         });
 
-    btn.addEventListener('click',function(){
-      if(userId==null){
-        alert("Debes registrarte e ingresar para poder agregar productos al carrito")
-      }  
-      carritoUser.add(newProduct).then(function(docRef) {
-          //alert("Producto agregado al carrito")
-          console.log("Document written with ID: ", docRef.id);
-          // Deshabilitar botón carrito
-          btn.setAttribute("disabled", true);
-          btn.innerText="Añadido al carrito";
+    btn.addEventListener('click', function () {
+        if (userId == null) {
+            alert("Debes registrarte e ingresar para poder agregar productos al carrito")
+        }
+        carritoUser.add(newProduct).then(function (docRef) {
+            //alert("Producto agregado al carrito")
+            console.log("Document written with ID: ", docRef.id);
+            // Deshabilitar botón carrito
+            btn.setAttribute("disabled", true);
+            btn.innerText = "Añadido al carrito";
 
-      })
-      .catch(function(error) {
-          console.error("Error adding document: ", error);
+        })
+            .catch(function (error) {
+                console.error("Error adding document: ", error);
 
-      });
-    }) 
-  });
+            });
+    })
+});
 
 
 

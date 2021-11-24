@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,26 +8,28 @@
     <title>Login</title>
     <link rel="stylesheet" href="./styles/styles2.css">
 </head>
+
 <body class="register container">
     <div class="register__square">
         <figure class="register__figure">
-            <img class="register__img" src="./img/login__img.png" alt="Tu futuro comienza ahora"> 
+            <img class="register__img" src="./img/login__img.png" alt="Tu futuro comienza ahora">
         </figure>
     </div>
     <aside class="register__side">
-      <div class="login__menu">
-        <a href="register.html" class="register__subtitle register__subtitle--picked">Registrarse</a>
-        <a href="login.html" class="register__subtitle ">Iniciar sesión</a>
-      </div>
-        
+        <div class="login__menu">
+            <a href="register.html" class="register__subtitle register__subtitle--picked">Registrarse</a>
+            <a href="login.html" class="register__subtitle ">Iniciar sesión</a>
+        </div>
+
         <form class="register__form" action="" id="register">
-            <hr size="1" width="100%" color="grey"> 
+            <hr size="1" width="100%" color="grey">
             <h2 class="register__title">Registro</h2>
-            
+
             <input class="form__input register__input" type="text" name="firstname" placeholder="Nombre ">
             <input class="form__input register__input" type="text" name="lastname" placeholder="Apellido">
             <input class="form__input register__input" type="text" name="direction" placeholder="Dirección">
-            <input class="form__input register__input" type="number" name="credit" placeholder="Numero de tarjeta de crédito">
+            <input class="form__input register__input" type="number" name="credit"
+                placeholder="Numero de tarjeta de crédito">
             <input class="form__input register__input" type="text" name="email" placeholder="Correo electrónico">
             <input class="form__input register__input" type="password" name="password" placeholder="Contraseña">
             <select class="form__input register__input" name="country" id="country">
@@ -279,9 +282,9 @@
                 <option value="Zimbabwe">Zimbabwe</option>
             </select>
             <input class="input__button" type="submit" value="Registrarme">
-            <p class="register__copy">  © Todos los derechos reservados 2021 · http://edx.org/</p>
+            <p class="register__copy"> © Todos los derechos reservados 2021 · http://edx.org/</p>
         </form>
-        </aside>
+    </aside>
     <!-- 
         <form class="form register">
             <h2 class="form__title">Registro</h2>
@@ -328,7 +331,7 @@
           </form>
 
     -->
-    
+
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-storage.js"></script>
@@ -336,6 +339,7 @@
     <script src="./js/firebase.js"></script>
     <script src="./js/register.js"></script>
 
-<!--  <script type="module" src="./js/auth.js"></script>-->
+    <!--  <script type="module" src="./js/auth.js"></script>-->
 </body>
+
 </html>

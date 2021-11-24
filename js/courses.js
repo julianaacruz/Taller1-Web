@@ -3,29 +3,29 @@ let selectedItem = null;
 
 //firebase
 const db = firebase.firestore();
-const productsRef = db.collection("products"); 
-const admin =document.querySelector('.auth__profile')
+const productsRef = db.collection("products");
+const admin = document.querySelector('.auth__profile')
 
-  //leer productos de firebase
-  let objectsList =[]
-  function getProducts(){
+//leer productos de firebase
+let objectsList = []
+function getProducts() {
 
     productsRef.get().then((querySnapshot) => {
-       objectsList = [];
-      querySnapshot.forEach((doc) => {
-          const obj = doc.data();
-          obj.id= doc.id;
-          objectsList.push(obj);
-          console.log(`${doc.id} => ${doc.data()}`);
-      });
-      productTemplate(objectsList);
-     //loader.classList.remove("loader--show")
-console.log(objectsList)
-  });
+        objectsList = [];
+        querySnapshot.forEach((doc) => {
+            const obj = doc.data();
+            obj.id = doc.id;
+            objectsList.push(obj);
+            console.log(`${doc.id} => ${doc.data()}`);
+        });
+        productTemplate(objectsList);
+        //loader.classList.remove("loader--show")
+        console.log(objectsList)
+    });
 
-  }
+}
 
-  getProducts();
+getProducts();
 
 const productsSection = document.getElementById("products");
 
@@ -35,22 +35,22 @@ const productsSection = document.getElementById("products");
 //add-----------------------------
 
 
-function productTemplate (list) {
+function productTemplate(list) {
     productsSection.innerHTML = '';
 
     list.forEach(function (item) {
 
-    const product = document.createElement("div");
-    product.className = "product";
-    product.setAttribute("href", `./product.html?id=${item.id}`);
+        const product = document.createElement("div");
+        product.className = "product";
+        product.setAttribute("href", `./product.html?id=${item.id}`);
 
-    // Carrito
-    const isAdded = cart.some(productCart => productCart.id === item.id);
+        // Carrito
+        const isAdded = cart.some(productCart => productCart.id === item.id);
 
-    console.log(isAdded); //No esta funcionando el some? ****************
+        console.log(isAdded); 
 
-    // Añadir el HTML a product
-    product.innerHTML = `
+        // Añadir el HTML a product
+        product.innerHTML = `
     <a href="./product.html?id=${item.id}" style="text-decoration: none;">
     <img src="${item.image}" alt="${item.name}" class="product__image">
             <figure class="product__logo">
@@ -72,72 +72,72 @@ function productTemplate (list) {
           
     `;
 
-    productsSection.appendChild(product);
+        productsSection.appendChild(product);
 
 
-    const productCartButton = product.querySelector(".btn--cart");
-/*
-    // Click botón del carrito:
-    productCartButton.addEventListener("click", e => {
-        e.preventDefault();
+        const productCartButton = product.querySelector(".btn--cart");
+        /*
+            // Click botón del carrito:
+            productCartButton.addEventListener("click", e => {
+                e.preventDefault();
+        
+                const productAdded = {
+                    id: item.id,
+                    name: item.name,
+                    image: item.image,
+                    price: item.price
+                };
+        
+                cart.push(productAdded);
+        
+                // Deshabilitar botón carrito
+                productCartButton.setAttribute("disabled", true);
+                productCartButton.innerText="Añadido al carrito";
+        
+            });
+            */
 
-        const productAdded = {
-            id: item.id,
-            name: item.name,
-            image: item.image,
-            price: item.price
-        };
 
-        cart.push(productAdded);
+        //eliminar producto
+        const deleteBtn = product.querySelector('.product__delete');
 
-        // Deshabilitar botón carrito
-        productCartButton.setAttribute("disabled", true);
-        productCartButton.innerText="Añadido al carrito";
+        deleteBtn.addEventListener('click', function () {
+
+
+            productsRef.doc(item.id).delete().then(function () {
+                getProducts();
+
+                console.log("Document successfully deleted!");
+            }).catch(function (error) {
+                console.error("Error removing document: ", error);
+            });
+        })
+
+
+        productsSection.appendChild(product);
+
+        const editBtn = product.querySelector('.product__edit');
+        editBtn.addEventListener('click', function () {
+            form.name.value = item.name;
+            //form.image.value=elem.img;
+            form.price.value = item.price;
+            selectedItem = item;
+        });
+
+        if (userInfo && userInfo.admin) {
+            deleteBtn.classList.remove('hidden');
+            editBtn.classList.remove('hidden');
+
+
+            admin.setAttribute('href', "index.html");
+
+        }
+
+
+
+
 
     });
-    */
-
-
-    //eliminar producto
-    const deleteBtn = product.querySelector('.product__delete');
-
-    deleteBtn.addEventListener('click',function(){
-
-
-      productsRef.doc(item.id).delete().then(function() {
-          getProducts();
-
-          console.log("Document successfully deleted!");
-      }).catch(function(error) {
-          console.error("Error removing document: ", error);
-      });
-      })
-    
-
-      productsSection.appendChild(product);
-
-    const editBtn = product.querySelector('.product__edit');
-    editBtn.addEventListener('click',function(){
-      form.name.value=item.name;
-      //form.image.value=elem.img;
-      form.price.value=item.price;
-      selectedItem =item;
-    });
-   
-    if(userInfo && userInfo.admin) {
-      deleteBtn.classList.remove('hidden');
-      editBtn.classList.remove('hidden');
-
-
-    admin.setAttribute('href', "index.html");
-
-    }
-
-
-
-
-
-});
 };
 
 
@@ -146,69 +146,69 @@ function productTemplate (list) {
 // agregar nuevo producto
 const form = document.querySelector('.form');
 form.addEventListener('submit', function (event) {
-  event.preventDefault();
+    event.preventDefault();
 
-//para probar la subida de la imagen  
-  const newProduct = {
-    name: form.name.value,
-    price: form.price.value,
-    description: form.description.value,
-    image: form.image.value,
-    logo: form.logo.value,
-   university: form.university.value,
-   level: form.level.value,
-   type: form.type.value,
-   about: form.About.value,
-   instructor: form.instructor.value,
-   instructordescription: form.instructordescription.value, 
-   profilepic: form.instructorpp.value, 
+    //para probar la subida de la imagen  
+    const newProduct = {
+        name: form.name.value,
+        price: form.price.value,
+        description: form.description.value,
+        image: form.image.value,
+        logo: form.logo.value,
+        university: form.university.value,
+        level: form.level.value,
+        type: form.type.value,
+        about: form.About.value,
+        instructor: form.instructor.value,
+        instructordescription: form.instructordescription.value,
+        profilepic: form.instructorpp.value,
 
-  };
+    };
 
-//  loader.classList.add("loader--show");
-  function handleThen(docRef) {
-      
-    getProducts();
-    form.name.value = '';
-    form.price.value = '';  
-    form.description.value = '';
-    form.image.value = '';
-    form.logo.value = '';
-    form.university.value = '';
-    form.level.value = '';
-    form.type.value = '';
-    form.About.value = '';
-    form.instructor.value = '';
-   // form.color.value = '';
-    selectedItem =null;
+    //  loader.classList.add("loader--show");
+    function handleThen(docRef) {
 
-
-    location.reload()
-}
+        getProducts();
+        form.name.value = '';
+        form.price.value = '';
+        form.description.value = '';
+        form.image.value = '';
+        form.logo.value = '';
+        form.university.value = '';
+        form.level.value = '';
+        form.type.value = '';
+        form.About.value = '';
+        form.instructor.value = '';
+        // form.color.value = '';
+        selectedItem = null;
 
 
-
-function handleCatch  (error) {
-  console.error("Error adding document: ", error);
-}
-
-// si existe, es decir que va a editar
-  if(selectedItem){
-    productsRef.doc(selectedItem.id).set(newProduct).
-    then(handleThen)
-  .catch(handleCatch);
-
-  }
-  else{
-    
-  //si no existe es porque es un nuevo producto
+        location.reload()
+    }
 
 
-  productsRef.add(newProduct)   
-.then(handleThen)
-.catch(handleCatch);
 
-}
+    function handleCatch(error) {
+        console.error("Error adding document: ", error);
+    }
+
+    // si existe, es decir que va a editar
+    if (selectedItem) {
+        productsRef.doc(selectedItem.id).set(newProduct).
+            then(handleThen)
+            .catch(handleCatch);
+
+    }
+    else {
+
+        //si no existe es porque es un nuevo producto
+
+
+        productsRef.add(newProduct)
+            .then(handleThen)
+            .catch(handleCatch);
+
+    }
 });
 
 
@@ -220,7 +220,7 @@ const filterByCategorySelect = document.getElementById("categories");
 const orderBySelect = document.getElementById("orderBy");
 
 const loadProducts = () => {
-    
+
     const category = filterByCategorySelect.value || "";
     const order = orderBySelect.value || "";
 
@@ -241,14 +241,10 @@ const loadProducts = () => {
     if (order === "desc") {
         filteredProductsByCategory = filteredProductsByCategory.sort((a, b) => b.price - a.price);
     }
-    
+
     //pintar
     productTemplate(filteredProductsByCategory);
-    /*
-    filteredProductsByCategory.forEach(product => {
-        productTemplate(product);
-    });
-    */
+   
 }
 
 
@@ -263,11 +259,3 @@ orderBySelect.addEventListener("change", e => {
 console.log(objectsList)
 
 
-//Pintar
-/*
-objectsList.forEach(product => {
-    productTemplate(product);
-    console.log("1 producto")
-}); 
-
-*/
