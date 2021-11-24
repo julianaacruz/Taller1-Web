@@ -396,14 +396,14 @@ img {
 }
 
 .product__unilogo {
-  width: 280px;
-  height: 150px;
-  padding: 20px;
+  width: 70%;
+  height: 100%;
+  padding: 1em;
   background: #FFFFFF;
   border: 1px solid rgba(9, 38, 43, 0.5);
   position: relative;
-  top: -70px;
-  left: 70px;
+  top: -5em;
+  left: 5em;
 }
 
 .product__description {
