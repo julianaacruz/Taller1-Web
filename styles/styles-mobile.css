@@ -158,6 +158,10 @@
         font-size: 1em
     }
 
+    .auth__signout{
+        display: block;
+    }
+
     .btn--grey{
         margin: 0.5em;
         display: block;
