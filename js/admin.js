@@ -7,14 +7,11 @@ var userData = JSON.parse(localStorage.getItem("userId"));
 var userId = userData.id;
 const productsRef = db.collection('Pedidos')
 let totalPrice = 0;
-//const loader = document.querySelector(".loader");
-//const total =document.querySelector(".sectionTotal__total");
+
 let selectedItem = null;
 
 // Create a root reference
 var storageRef = firebase.storage().ref();
-
-//const btn = document.querySelector(".btn-checkout");
 
 // creación de nuevos productos a partir de la lista
 function renderProducts(list) {
@@ -52,7 +49,6 @@ function renderProducts(list) {
     });
 
 }
-// console.log(elem.price)
 
 //leer los productos de firebase
 
@@ -64,7 +60,6 @@ function getProducts() {
             const obj = doc.data();
             obj.id = doc.id;
             objects.push(obj);
-            console.log(`${doc.id} => ${doc.data()}`);
         });
         renderProducts(objects);
         // loader.classList.remove("loader--show")

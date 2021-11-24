@@ -46,8 +46,7 @@ register.addEventListener('submit', function (event) {
 
 
             alert("información invalida, intente de nuevo");
-            // register.querySelector('.form__error').classList.remove('hidden');
-            // ...
+
         });
 });
 

@@ -82,6 +82,12 @@
     .courses__item{
         width: 222px;
     }
+    .register__square{
+        display: none;
+
+    }
+
+
 }
 
 @media all and (max-width:953px){

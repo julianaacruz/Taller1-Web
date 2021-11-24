@@ -7,7 +7,6 @@ var userData = JSON.parse(localStorage.getItem("userId"));
 var userId = userData.id;
 const productsRef = db.collection('users').doc(userId).collection('carrito')
 let totalPrice = 0;
-//const loader = document.querySelector(".loader");
 const total = document.querySelector(".sectionTotal__total");
 let selectedItem = null;
 
@@ -61,7 +60,6 @@ function renderProducts(list) {
             productsRef.doc(elem.id).delete().then(function () {
                 getProducts();
 
-                console.log("Document successfully deleted!");
             }).catch(function (error) {
                 console.error("Error removing document: ", error);
             });
@@ -80,7 +78,6 @@ function renderProducts(list) {
     });
 
 }
-// console.log(elem.price)
 
 //leer los productos de firebase
 
@@ -92,10 +89,8 @@ function getProducts() {
             const obj = doc.data();
             obj.id = doc.id;
             objects.push(obj);
-            console.log(`${doc.id} => ${doc.data()}`);
         });
         renderProducts(objects);
-        // loader.classList.remove("loader--show")
     });
 
 }

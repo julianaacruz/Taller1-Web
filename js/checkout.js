@@ -20,10 +20,6 @@ const credit = document.querySelector('.credit');
 
 
 
-
-//var userInfo = db.collection('users').doc(userId);
-
-
 var pedidosUsers = db.collection('Pedidos');
 // Create a root reference
 var storageRef = firebase.storage().ref();
@@ -43,7 +39,6 @@ function getUsers() {
         if (doc.exists) {
             console.log("Document data:", doc.data());
             var user = doc.data();
-            console.log(user.lastname)
 
             var temp = {
 
@@ -55,9 +50,7 @@ function getUsers() {
 
             direction.innerText = `Dirección de envío : ${user.direction}`;
             credit.innerText = `Tarjeta de crédito : ${user.credit}`;
-            // userData.push(temp)
-            console.log(temp.firstname)
-            //nombre=userData[0].firstname;
+
             name.innerText = temp.firstname + " " + temp.lastname;
 
 
@@ -110,8 +103,6 @@ function renderProducts(list) {
         productsList.appendChild(newProduct);
 
         totalPrice += parseInt(elem.price);
-
-        console.log(totalPrice)
         total.innerText = `Total: ${formatCurrency(totalPrice)}`;
 
 
@@ -134,7 +125,6 @@ function renderProducts(list) {
     });
 
 }
-// console.log(elem.price)
 
 //leer los productos de firebase
 
@@ -146,7 +136,6 @@ function getProducts() {
             const obj = doc.data();
             obj.id = doc.id;
             objects.push(obj);
-            console.log(`${doc.id} => ${doc.data()}`);
         });
         renderProducts(objects);
         // loader.classList.remove("loader--show")
@@ -184,7 +173,6 @@ btn.addEventListener('click', function () {
 
 })
 
-console.log(pedido)
 
 btn.addEventListener('click', function () {
     //  location.href='perfil.html';

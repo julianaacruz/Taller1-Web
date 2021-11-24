@@ -1,31 +1,4 @@
-/*
-// Pedir id
-const url = window.location.search;
-const searchParams = new URLSearchParams(url);
-const productId = searchParams.get("id");
 
-console.log(productId);
-
-
-const product = products.find(product => product.id == productId);
-
-const productImage = document.getElementById("productImage");
-const productName = document.getElementById("productName");
-const productUniversity = document.getElementById("productUniversity");
-const productDescription = document.getElementById("productDescription");
-const productPrice = document.getElementById("productPrice");
-
-
-productName.innerText = product.name;
-productDescription.innerText = product.description;
-productUniversity.innerText = product.university;
-productPrice.innerText = `$${product.price}`;
-productImage.setAttribute("src", product.image);
-
-
-*/
-
-///leer producto de firebase
 
 window.addEventListener('load', function () {
 
@@ -59,7 +32,6 @@ window.addEventListener('load', function () {
         var carritoUser = db.collection('users').doc(userId).collection('carrito');
     }
 
-    //  var storageRef = firebase.storage().ref();
 
     //referencia al producto con el uid específico
     productosRef.doc(productId)
@@ -70,14 +42,7 @@ window.addEventListener('load', function () {
 
             const productName = document.getElementById("productName");
             productName.innerText = product.name;
-            /*
-                  storageRef.child(product.storageImg).getDownloadURL().then(function(url) {
-                    // Or inserted into an <img> element:
-                    document.querySelector('.details__img').setAttribute('src', url);
-                  }).catch(function(error) {
-                    // Handle any errors
-                  });
-            */
+
             document.getElementById("productPrice").innerText = formatCurrency(product.price);
             document.getElementById("productUniversity").innerText = product.university;
             document.getElementById("productDescription").innerText = product.description;
@@ -96,13 +61,9 @@ window.addEventListener('load', function () {
                 img: product.image,
                 price: product.price,
                 university: product.university,
-                //details :product.details,
-                //storageImg: product.storageImg
+
             };
 
-            /* titlep = product.title;
-              pricep= product.list;
-       */
         })
 
     const btn = document.querySelector('.product__addToCart');
@@ -113,18 +74,7 @@ window.addEventListener('load', function () {
 
             const product = snapshot.data();
 
-            //console.log(newProduct)
-
-
-            /*
-                const title = document.querySelector('h1');
-                title.innerText = product.title;
-          
-                storageRef.child(product.storageImg).getDownloadURL().then(function(url) {
-                  // Or inserted into an <img> element:
-                  document.querySelector('img').setAttribute('src', url);
-                  */
-
+            
         }).catch(function (error) {
             // Handle any errors
         });
